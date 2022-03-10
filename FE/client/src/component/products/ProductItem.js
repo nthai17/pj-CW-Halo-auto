@@ -1,5 +1,5 @@
 const ProductItem = () => {
-    return (<div>Na Ni</div>)
+    return (<div>WoW</div>)
 }
 
 export default ProductItem
