@@ -1,0 +1,29 @@
+@import '../../../css/base.scss';
+
+.home__section {
+    margin-top: 10px;
+    &__header {
+        height: 40px;
+        i {
+            margin-right: 16px;
+            font-size: 32px;
+            color: $redColor;
+        }
+        h1 {
+            font-size: 24px;
+            color: $textColor;
+        }
+    }
+    &__content {
+        position: relative;
+        margin-top: 10px;
+    }
+    &__leftImgage {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &__listDemo {
+        padding: 0 16px;
+    }
+}
