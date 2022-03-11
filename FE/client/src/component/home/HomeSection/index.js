@@ -29,12 +29,8 @@ function HomeSection(props) {
                 <div className='home__section__listDemo'>
                     {list.length &&
                         <Slider {...setting}>
-                            {list.map((item,index) => <ProductItem data={item} key={item.id}/>)}
+                            {list.map(item => <ProductItem data={item} key={item.id}/>)}
                         </Slider>
-                    // list.map(item => {return (<ProductItem data={item} key={item.id}/>)})
-                    
-                    
-                    
                     }
                 </div>    
             </div>
