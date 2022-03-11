@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import NotFound from './component/NotFound'
 import Home from './component/home';
 import Products from './component/products';
+import ProductsDetail from './component/products/detail'
 import Navigation from './component/Navigation';
 
 // lib
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/product/detail:id" element={<ProductsDetail />} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
 

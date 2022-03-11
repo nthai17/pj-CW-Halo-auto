@@ -1,12 +1,29 @@
-const ProductItem = ({data}) => {
+import {Link} from 'react-router-dom';
+import './productItem.scss'
+import { formatPrice } from '../../lib/until'
 
+const ProductItem = ({data}) => {
+    const handleAddToCart = (data) => {
+        console.log(data);   
+    }
     return (
         <div className="product__item">
-            <a>
-                <div className="product__item__bg">
-                    <img src={data.imageSrc}/>
+            <div className='product__item-wrap'>
+                <Link className="product__item__background" to={`/product/detail/${data.id}`}>
+                    <img src={data.imgSrc}/>
+                </Link>
+                <div className="product__item__addCartBtn flex alignItem-center justify-center"
+                    onClick={() => handleAddToCart(data)}
+                >
+                    <i className="fa-solid fa-cart-plus"/>
                 </div>
-            </a>
+                <Link className='product__item__name' to={`/product/detail/${data.id}`}>{data.name}</Link>
+                <div className='product__item__price'>
+                    <span className='product__item__price--current'>{formatPrice(data.currentPrice)}</span>
+                    <span className='product__item__price--old'>{formatPrice(data.oldPrice)}</span>
+                </div>
+                <div className='product__item__label'>{data.saleFlash}%</div>
+            </div>
         </div>
     )
 }
