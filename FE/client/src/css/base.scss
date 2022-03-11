@@ -1,2 +1,13 @@
 $textColor: #333;
 $redColor: red;
+$textBlur: #999;
+$textRed: #ff2d37;
+a {
+    text-decoration: none;
+}
+@mixin borderDefault {
+    border: 1px solid #e5e5e5;
+}
+@mixin borderNone {
+    border: 1px solid #fff;
+}
