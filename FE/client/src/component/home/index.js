@@ -46,7 +46,6 @@ const Home = () => {
         },
     }
     const {tire} = fakeData
-    console.log(tire)
     return (
         <div className='home'>
             {/* Giang : slide + search, danh mục sản phẩm, sản phẩm giảm giá, banner */}
