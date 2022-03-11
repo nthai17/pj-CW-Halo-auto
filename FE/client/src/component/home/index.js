@@ -53,7 +53,7 @@ const Home = () => {
             {/* Giang code slide + search ở đây */}
 
             {/* Thái : Lốp bánh xe, phụ kiện, thiết bị thông minh, tin tức, top thương hiệu */}
-            <div className='grid wire home__section'>
+            <div className='grid wide home__section'>
                 {/* giang code danh mục sản phẩm, sản phẩm giảm giá, banner ở đây -> mỗi phần 1 section*/}
                 <section className="home__section__tire">
                     <HomeSection list={tire.listPreview} leftImage={tire.bannerSrc} headerText='LỐP BÁNH XE'/>
