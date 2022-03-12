@@ -118,6 +118,105 @@ export const fakeData = {
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
                 saleFlash: 20
             },
+            {
+                id: 2,
+                name: 'NHỚT CASTROL MAGNATEC',
+                currentPrice: 460000,
+                oldPrice: 660000,
+                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
+                saleFlash: 20
+            },
+            {
+                id: 3,
+                name: 'NHỚT CASTROL MAGNATEC',
+                currentPrice: 460000,
+                oldPrice: 660000,
+                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
+                saleFlash: 20
+            },
+            {
+                id: 4,
+                name: 'NHỚT CASTROL MAGNATEC',
+                currentPrice: 460000,
+                oldPrice: 660000,
+                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
+                saleFlash: 20
+            },
+            {
+                id: 5,
+                name: 'NHỚT CASTROL MAGNATEC',
+                currentPrice: 460000,
+                oldPrice: 660000,
+                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
+                saleFlash: 20
+            },
+            {
+                id: 6,
+                name: 'NHỚT CASTROL MAGNATEC',
+                currentPrice: 460000,
+                oldPrice: 660000,
+                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
+                saleFlash: 20
+            },
         ]
     }
 }
+
+export const newsList = [
+    {
+        id: 1,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/articles/blog3.jpg?v=1567948212317',
+        createAt: '11/03/2022',
+        title: 'NISSAN NAVARA 2019 THÊM BẢN MỚI GIÁ 675 TRIỆU'
+    },
+    {
+        id: 2,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/articles/blog3.jpg?v=1567948212317',
+        createAt: '11/03/2022',
+        title: 'NISSAN NAVARA 2019 THÊM BẢN MỚI GIÁ 675 TRIỆU'
+    },
+    {
+        id: 3,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/articles/blog3.jpg?v=1567948212317',
+        createAt: '11/03/2022',
+        title: 'NISSAN NAVARA 2019 THÊM BẢN MỚI GIÁ 675 TRIỆU'
+    }
+]
+
+export const topBranchsList = [
+    {
+        id: 1,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/brand1.png?1646905627969',
+        name: 'farere'
+    },
+    {
+        id: 2,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/brand2.png?1646905627969',
+        name: 'xusle'
+    },
+    {
+        id: 3,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/brand3.png?1646905627969',
+        name: 'ford'
+    },
+    {
+        id: 4,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/brand4.png?1646905627969',
+        name: 'logo'
+    },
+    {
+        id: 5,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/brand5.png?1646905627969',
+        name: 'letchrdev'
+    },
+    {
+        id: 6,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/brand6.png?1646905627969',
+        name: 'lenbley'
+    },
+    {
+        id: 7,
+        imgSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/brand7.png?1646905627969',
+        name: 'ford'
+    },
+]
