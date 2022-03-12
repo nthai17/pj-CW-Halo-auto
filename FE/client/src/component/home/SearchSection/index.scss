@@ -1,0 +1,92 @@
+@import '../../../css/base.scss';
+
+.search-banner {
+  position: relative;
+
+  & > * {
+    height: 100%;
+  }
+
+  img {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 30px;
+  }
+
+  .search-form {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &__container {
+      height: 99%;
+    }
+
+    &__wrapper {
+      background-color: rgba(0, 0, 0, 0.75);
+      width: 25%;
+      height: 100%;
+      color: #ffffff;
+      position: relative;
+      
+      .form {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        padding: 0 20px;
+
+        h1 {
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #fff;
+          font-size: 32px;
+        }
+
+        p {
+          text-transform: uppercase;
+          color: $textBlur;
+        }
+
+        input {
+          width: 100%;
+          padding: 10px 20px;
+          border-radius: 5px;
+          margin-bottom: 15px;
+          outline: none;
+        }
+
+        select {
+          width: 100%;
+          padding: 15px 20px;
+          margin-bottom: 15px;
+          outline: none;
+        }
+
+        button {
+          background-color: $textRed;
+          color: #ffffff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          width: 100%;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

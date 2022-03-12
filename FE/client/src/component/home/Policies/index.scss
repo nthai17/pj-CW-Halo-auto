@@ -1,0 +1,9 @@
+@import '../../../css/base.scss';
+
+.policies {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 120px;
+  @include flexBox(row, center, flex-start);
+  position: relative;
+  top: -7px;
+}

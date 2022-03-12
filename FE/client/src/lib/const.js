@@ -159,7 +159,67 @@ export const fakeData = {
                 saleFlash: 20
             },
         ]
-    }
+    },
+    categoriesImg: [
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_category_title1.jpg?1646905627969",
+        title: "Lốp bánh xe"
+      },
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_category_title2.jpg?1646905627969",
+        title: "Thiết bị thông minh"
+      },
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_category_title3.jpg?1646905627969",
+        title: "Nội thất"
+      },
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_category_title4.jpg?1646905627969",
+        title: "Đèn ô tô"
+      },
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_category_title5.jpg?1646905627969",
+        title: "Dầu nhớt"
+      },
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_category_title6.jpg?1646905627969",
+        title: "Phụ kiện"
+      }
+    ],
+    categories: [
+      "Đèn ô tô",
+      "Dầu nhớt",
+      "Nội thất",
+      "Động cơ",
+      "Thiết bị thông minh",
+      "Phụ kiện",
+      "Lốp xe",
+      "Sản phẩm khuyến mãi",
+      "Sản phẩm nổi bật",
+      "Sản phẩm mới"
+    ],
+    policies: [
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section-image-shipping1.png?1646905627969",
+        title: "Miễn phí vận chuyển",
+        subTitle: "Với tất cả đơn hàng trên 10 triệu"
+      },
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section-image-shipping2.png?1646905627969",
+        title: "HOÀN TRẢ TIỀN",
+        subTitle: "Được đổi trả trong vòng 7 ngày"
+      },
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section-image-shipping3.png?1646905627969",
+        title: "HỖ TRỢ TRỰC TUYẾN",
+        subTitle: "Chúng tôi hỗ trợ 24/24 trong ngày"
+      },
+      {
+        imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section-image-shipping4.png?1646905627969",
+        title: "THANH TOÁN",
+        subTitle: "Thanh toán theo nhiều cách khác nhau"
+      }
+    ]
 }
 
 export const newsList = [
