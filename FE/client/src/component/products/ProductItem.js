@@ -10,7 +10,7 @@ const ProductItem = ({data}) => {
         <div className="product__item">
             <div className='product__item-wrap'>
                 <Link className="product__item__background" to={`/product/detail/${data.id}`}>
-                    <img src={data.imgSrc}/>
+                    <img src={data.imgSrc} alt={data.name}/>
                 </Link>
                 <div className="product__item__addCartBtn flex alignItem-center justify-center"
                     onClick={() => handleAddToCart(data)}

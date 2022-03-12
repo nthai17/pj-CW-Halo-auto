@@ -1,6 +1,5 @@
 import './index.scss'
 import ProductItem from '../../products/ProductItem'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -23,9 +22,9 @@ function HomeSection(props) {
                 <h1>{headerText}</h1>
             </div>
             <div className='home__section__content flex alignItem-start justify-center'>
-                <a className='home__section__leftImgage'>
-                    <img className='home__section__leftImgage__img' src={leftImage}/>
-                </a>
+                <div className='home__section__leftImgage'>
+                    <img className='home__section__leftImgage__img' src={leftImage} alt={headerText}/>
+                </div>
                 <div className='home__section__listDemo'>
                     {list.length &&
                         <Slider {...setting}>
