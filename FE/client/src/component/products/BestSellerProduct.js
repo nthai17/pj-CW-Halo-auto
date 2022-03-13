@@ -1,12 +1,29 @@
-import ProductItem from "./ProductItem";
-const BestSellerProduct = () => {
+import ProductItemSlide from "./ProductItemSlide";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const BestSellerProduct = ({ list }) => {
+  console.log(list);
+  const setting = {
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    dots: false,
+    arrows: true
+};
   return (
     <div className="best-seller-product">
       <div className="title-text">
         <h3>Sản phẩm bán chạy</h3>
-        <div className="wrap-product-sale">
-          <ProductItem/>
-        </div>
+      </div>
+      <div className="wrap-product-sale">
+        {list.length && (
+          <Slider {...setting}>
+            {list.map((item) => <ProductItemSlide data={item} key={item.id}/>)}
+          </Slider>
+        )}
       </div>
     </div>
   );

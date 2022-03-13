@@ -2,13 +2,14 @@ import {Link} from 'react-router-dom';
 import './productItem.scss'
 import { formatPrice } from '../../lib/until'
 
-const ProductItem = ({data}) => {
+const ProductItem = ({data, type}) => {
     const handleAddToCart = (data) => {
         console.log(data);   
     }
     return (
         <div className="product__item">
             <div className='product__item-wrap'>
+                <div className={`${type === 'slide' ? 'flex' : ''}`}></div>
                 <Link className="product__item__background" to={`/product/detail/${data.id}`}>
                     <img src={data.imgSrc} alt={data.name}/>
                 </Link>
