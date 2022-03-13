@@ -35,11 +35,11 @@
     &__listDemo {
         width: 100%;
     }
-    .slick-next, .slick-prev {
-        z-index: 10;
-    }
-    .slick-next::before, .slick-prev::before {
-        color: red;
-        font-size: 50px !important;
-    }
+}
+.slick-next, .slick-prev {
+    z-index: 10;
+}
+.slick-next::before, .slick-prev::before {
+    color: red !important;
+    font-size: 50px !important;
 }

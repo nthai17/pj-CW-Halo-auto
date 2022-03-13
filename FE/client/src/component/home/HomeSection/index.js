@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function HomeSection(props) {
+    // console.log(props)
     const { list, leftImage, headerText } = props
     const setting = {
         speed: 500,
