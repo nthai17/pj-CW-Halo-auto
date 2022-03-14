@@ -19,9 +19,30 @@ a {
         color: $textRed !important;
     }
 }
+
+body {
+  background-color: #f8f8f8;
+}
+
 @mixin borderDefault {
     border: 1px solid #e5e5e5;
 }
 @mixin borderNone {
     border: 1px solid #fff;
+}
+
+@mixin flexBox($flex-direction: row, $align-items, $justify-content) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}
+
+.slick-prev
+{
+    left: -50px;
+}
+
+.background-white {
+  background-color: #ffffff;
 }

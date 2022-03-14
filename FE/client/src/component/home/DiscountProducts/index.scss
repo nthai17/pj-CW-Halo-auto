@@ -1,0 +1,67 @@
+@import '../../../css/base.scss';
+
+.wrapper {
+  width: 100%;
+}
+
+.countdown-timer {
+  padding: 0 30px;
+
+  i {
+    font-size: 50px;
+  }
+
+  &__wrapper {
+    background-color: #282828;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 500px;
+  }
+
+  &__top {
+    background-color: #ff2d37;
+    width: 100%;
+    height: 60%;
+    @include flexBox(row, center, center);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__bottom {
+    background-color: #444444;
+    height: 40%;
+    @include flexBox(row, center, center);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 16px;
+  }
+
+  &__days {
+    @include flexBox(column, stretch, center);
+    width: 110px;
+    height: 80px;
+  }
+
+  &__hours {
+    @include flexBox(column, stretch, center);
+    width: 110px;
+    height: 80px;
+  }
+
+  &__minutes {
+    @include flexBox(column, stretch, center);
+    width: 110px;
+    height: 80px;
+  }
+
+  &__seconds {
+    @include flexBox(column, stretch, center);
+    width: 110px;
+    height: 80px;
+  }
+}

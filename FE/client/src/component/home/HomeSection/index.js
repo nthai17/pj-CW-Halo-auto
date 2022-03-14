@@ -3,6 +3,7 @@ import ProductItem from '../../products/ProductItem'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import '../../../css/base.scss';
 
 function HomeSection(props) {
     // console.log(props)
@@ -22,10 +23,10 @@ function HomeSection(props) {
                 <i className="fa-solid fa-angles-right"></i>
                 <h1>{headerText}</h1>
             </div>
-            <div className='home__section__content flex alignItem-start justify-center'>
-                <div className='home__section__leftImgage'>
-                    <img className='home__section__leftImgage__img' src={leftImage} alt={headerText}/>
-                </div>
+            <div className='home__section__content flex alignItem-start justify-center background-white'>
+                <a className='home__section__leftImgage'>
+                    <img className='home__section__leftImgage__img' src={leftImage}/>
+                </a>
                 <div className='home__section__listDemo'>
                     {list.length &&
                         <Slider {...setting}>
