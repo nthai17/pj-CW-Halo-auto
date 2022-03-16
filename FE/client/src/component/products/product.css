@@ -152,11 +152,17 @@
 .wrap-box {
     padding: 0 10px;
 }
-.best-seller-product .slick-prev::before, .best-seller-product  .slick-next::before {
+.best-seller-product  .slick-next::before {
     position: absolute;
     top: 0;
     left: 0;
     transform: translateX(-30%);
+}
+.best-seller-product .slick-prev::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(20%);
 }
 .btn-buy {
     color: white;
@@ -167,10 +173,13 @@
 button {
     background: #ff2d37;
     border-radius: 3px;
+    height: 34px;
     border: none;
 }
 .fa-eye {
     background: #ff2d37;
     color: #fff;
     padding: 5px;
+    width: 34px;
+    
 }
