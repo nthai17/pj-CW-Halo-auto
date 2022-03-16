@@ -133,6 +133,7 @@
 }
 .price-box{
     height: 40%;
+    margin-top: 10px;
 }
 .special-price{
     color: #ff2d37;
@@ -160,7 +161,6 @@
 .btn-buy {
     color: white;
     padding: 5px;
-    margin-top: 10px;
     margin-right: 10px;
     text-transform: uppercase;
 }
@@ -173,5 +173,4 @@ button {
     background: #ff2d37;
     color: #fff;
     padding: 5px;
-    
 }

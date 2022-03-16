@@ -18,10 +18,10 @@ const ProductItemSlide = ({ data }) => {
             {data.name}
           </Link>
           <div className="price-box">
-            <div className="special-price">
+            <span className="special-price">
               {formatPrice(data.currentPrice)}
-            </div>
-            <div className="old-price">{formatPrice(data.oldPrice)}</div>
+            </span>
+            <span className="old-price">{formatPrice(data.oldPrice)}</span>
           </div>
           <button className="btn-buy">mua hàng</button>
           <button><i class="fa fa-eye" aria-hidden="true"></i></button>
