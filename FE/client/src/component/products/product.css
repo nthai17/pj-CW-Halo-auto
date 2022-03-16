@@ -59,7 +59,7 @@
 }
 .product-box {
     display: flex;
-    height: 150px;
+    height: 180px;
     background: #fff;
     position: relative;
     border: 1px solid #e5e5e5;
@@ -120,6 +120,7 @@
     text-align: left !important;
 }
 .product-name {
+    height: 40%;
     margin-bottom: 8px;
     margin-top: 14px;
     overflow: hidden;
@@ -128,6 +129,10 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
+    color: black;
+}
+.price-box{
+    height: 40%;
 }
 .special-price{
     color: #ff2d37;
@@ -151,4 +156,22 @@
     top: 0;
     left: 0;
     transform: translateX(-30%);
+}
+.btn-buy {
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+button {
+    background: #ff2d37;
+    border-radius: 3px;
+    border: none;
+}
+.fa-eye {
+    background: #ff2d37;
+    color: #fff;
+    padding: 5px;
+    
 }
