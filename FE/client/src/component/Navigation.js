@@ -1,7 +1,8 @@
 
 function Navigation() {
     return ( 
-        <div>
+        <div className="navigation">
+         
         </div>
     );
 }

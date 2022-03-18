@@ -5,39 +5,51 @@ export const fakeData = {
             [
                 {
                     id: 1,
-                    name: 'LỐP XE WARRIOR HUB',
+                    name: 'Lốp xe WARRIOR HUB',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20
+                    saleFlash: 20,
+                    brand: "Audi",
+                    status: "Còn hàng",
+                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
                 },
                 {
                     id: 2,
-                    name: 'LỐP XE WARRIOR HUB',
+                    name: 'Lốp xe WARRIOR HUB',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20
+                    saleFlash: 20,
+                    brand: "Audi",
+                    status: "Còn hàng",
+                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
                 },
                 {
                     id: 3,
-                    name: 'LỐP XE WARRIOR HUB',
+                    name: 'Lốp xe WARRIOR HUB',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20
+                    saleFlash: 20,
+                    brand: "Audi",
+                    status: "Còn hàng",
+                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
                 },
                 {
                     id: 4,
-                    name: 'LỐP XE WARRIOR HUB',
+                    name: 'Lốp xe WARRIOR HUB',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20
+                    saleFlash: 20,
+                    brand: "Audi",
+                    status: "Còn hàng",
+                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
                 },
                 {
                     id: 5,
-                    name: 'LỐP XE WARRIOR HUB',
+                    name: 'Lốp xe WARRIOR HUB',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -45,11 +57,14 @@ export const fakeData = {
                 },
                 {
                     id: 6,
-                    name: 'LỐP XE WARRIOR HUB',
+                    name: 'Lốp xe WARRIOR HUB',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20
+                    saleFlash: 20,
+                    brand: "Audi",
+                    status: "Còn hàng",
+                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
                 }
         ]
     },
@@ -66,7 +81,7 @@ export const fakeData = {
                     saleFlash: 20
                 },
                 {
-                    id: 3,
+                    id: 2,
                     name: 'RADIO Ô TÔ',
                     currentPrice: 1200000,
                     oldPrice: 1500000,

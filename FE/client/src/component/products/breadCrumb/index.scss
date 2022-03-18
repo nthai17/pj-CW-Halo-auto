@@ -1,0 +1,26 @@
+@import '../../../css/base.scss';
+
+.breadcrumb {
+  @include flexBox(row, center, center);
+
+  &__item {
+    @include flexBox(row, center, flex-start);
+    margin-right: 10px;
+
+    a, i {
+      color: $redColor;
+    }
+  }
+
+  &__link {
+    margin-right: 10px;
+  }
+
+  &__link--active {
+    color: #ffffff!important;
+  }
+
+  &__item {
+    
+  }
+}

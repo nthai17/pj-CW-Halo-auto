@@ -22,9 +22,9 @@ const Home = () => {
                 {/* giang code danh mục sản phẩm, sản phẩm giảm giá, banner ở đây -> mỗi phần 1 section*/}
                 <ProductCategories categories={categoriesImg} headerText='DANH MỤC SẢN PHẨM'/>
                 <DiscountProducts list={tire.listPreview} leftImage={tire.bannerSrc} headerText='SẢN PHẨM ĐANG GIẢM GIÁ'/>
-                <HomeSection list={tire.listPreview} leftImage={tire.bannerSrc} headerText='LỐP BÁNH XE'/>
-                <HomeSection list={accessory.listPreview} leftImage={accessory.bannerSrc} headerText='PHỤ KIỆN'/>
-                <HomeSection list={smartDivice.listPreview} leftImage={smartDivice.bannerSrc} headerText='THIẾT BỊ THÔNG MINH'/>  
+                <HomeSection category="tire" list={tire.listPreview} leftImage={tire.bannerSrc} headerText='LỐP BÁNH XE'/>
+                <HomeSection category="accessory" list={accessory.listPreview} leftImage={accessory.bannerSrc} headerText='PHỤ KIỆN'/>
+                <HomeSection category="smartDivice" list={smartDivice.listPreview} leftImage={smartDivice.bannerSrc} headerText='THIẾT BỊ THÔNG MINH'/>  
                 <NewsSection list={newsList}/>
                 <TopBranchs list={topBranchsList} headerText='TOP THƯƠNG HIỆU'/>  
             </div>
