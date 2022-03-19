@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 import './productItem.scss'
 import { formatPrice } from '../../lib/until'
 
-const ProductItem = ({data, type}) => {
+const ProductItem = ({data, type, category}) => {
     const handleAddToCart = (data) => {
         console.log(data);   
     }
@@ -10,7 +10,7 @@ const ProductItem = ({data, type}) => {
         <div className="product__item">
             <div className='product__item-wrap'>
                 <div className={`${type === 'slide' ? 'flex' : ''}`}></div>
-                <Link className="product__item__background" to={`/product/detail/${data.id}`}>
+                <Link className="product__item__background" to={`/product/${category}/${data.id}`}>
                     <img src={data.imgSrc} alt={data.name}/>
                 </Link>
                 <div className="product__item__addCartBtn flex alignItem-center justify-center"
@@ -18,7 +18,7 @@ const ProductItem = ({data, type}) => {
                 >
                     <i className="fa-solid fa-cart-plus"/>
                 </div>
-                <Link className='product__item__name' to={`/product/detail/${data.id}`}>{data.name}</Link>
+                <Link className='product__item__name' to={`/product/${category}/${data.id}`}>{data.name}</Link>
                 <div className='product__item__price'>
                     <span className='product__item__price--current'>{formatPrice(data.currentPrice)}</span>
                     <span className='product__item__price--old'>{formatPrice(data.oldPrice)}</span>

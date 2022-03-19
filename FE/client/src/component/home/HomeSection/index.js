@@ -7,7 +7,7 @@ import '../../../css/base.scss';
 
 function HomeSection(props) {
     // console.log(props)
-    const { list, leftImage, headerText } = props
+    const { list, leftImage, headerText, category } = props
     const setting = {
         speed: 500,
         slidesToShow: 5,
@@ -30,7 +30,7 @@ function HomeSection(props) {
                 <div className='home__section__listDemo'>
                     {list.length &&
                         <Slider {...setting}>
-                            {list.map(item => <ProductItem data={item} key={item.id}/>)}
+                            {list.map(item => <ProductItem category={category} data={item} key={item.id}/>)}
                         </Slider>
                     }
                 </div>    

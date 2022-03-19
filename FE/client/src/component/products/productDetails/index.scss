@@ -1,0 +1,208 @@
+@import '../../../css/base.scss';
+
+.breadcrumb-img {
+  position: relative;
+  
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  img {
+    aspect-ratio: 9/1;
+    object-fit: cover;
+  }
+
+  .breadcrumb__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    h3 {
+      color: #ffffff;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.product-details {
+  &__top {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__img {
+    border: 1px solid $lightGray;
+    padding: 30px;
+    background-color: #ffffff;
+  }
+
+  &__info {
+    padding: 0 30px;
+
+    h3 {
+      color: $textColor;
+    }
+
+    .rating {
+      @include flexBox(row, center, flex-start);
+
+      margin: 10px 0;
+
+      i {
+        color: $yellowColor;
+        margin-right: 3px;
+      }
+
+      span {
+        margin-left: 6px;
+        color: $greenColor;
+      }
+    }
+
+    .brand-status {
+      @include flexBox(row, center, flex-start);
+
+      & > * {
+        margin-right: 15px;
+
+        span {
+          color: $textRed;
+        }
+      }
+    }
+
+    .prices {
+      @include flexBox(row, center, flex-start);
+      margin: 10px 0;
+
+      p {
+        font-size: 30px;
+        color: $redColor;
+        margin-right: 15px;
+      }
+
+      span {
+        color: $textBlur;
+        text-decoration: line-through;
+      }
+    }
+
+    .summary {
+      color: $textColor;
+      line-height: 1.8rem;
+      margin: 10px 0;
+    }
+
+    .media-icons {
+      a {
+        padding: 8px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+
+      label {
+        margin-right: 20px;
+      }
+
+      .facebook {
+        background-color: #2f6cdc;;
+      }
+
+      .twitter {
+        background-color: #4cadf8;
+      }
+
+      .printer {
+        background-color: #ec623d;
+      }
+
+      .google {
+        background-color: #ef3218;
+      }
+
+      i {
+        color: #ffffff
+      }
+    }
+  }
+
+  &__order {
+    @include flexBox(row, center, flex-start);
+
+    div {
+      background-color: #ffffff;
+      border: 1px solid $textBlur;
+      margin-right: 15px;
+
+      button {
+        width: 50px;
+        padding: 10px 0;
+        border: none;
+        background-color: #ffffff;
+        color: $textBlur;
+      }
+
+      span {
+        padding: 12px 30px;
+        border-right: 1px solid $textBlur;
+        border-left: 1px solid $textBlur;
+        color: $textColor;
+      }
+    }
+
+    .btn__order {
+      padding: 11px 50px;
+      border: none;
+      background-color: $textRed;
+      color: #ffffff;
+    }
+  }
+
+  .home__section__listDemo {
+    @include flexBox(row, center, flex-start);
+  }
+
+  .home__section__content {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .home__section__wrap {
+    padding: 30px 0;
+  }
+}
+
+.trendy-products {
+  h5 {
+    color: #ffffff;
+    background-color: $textRed;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+  }
+
+  h5::before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    position: absolute;
+    height: 100%;
+    background: url(//bizweb.dktcdn.net/100/364/158/themes/802198/assets/icon-car.png?1638764971580) no-repeat scroll 8px 14px;
+    background-color: #bb0d0d;
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  }
+}
+
+

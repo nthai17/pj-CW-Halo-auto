@@ -1,0 +1,41 @@
+@import '../../../../css/base.scss';
+
+.trendy-product__wrapper {
+  background-color: #ffffff;
+}
+
+.trendy-link {
+  color: $textColor;
+}
+
+.trendy-product {
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  &__img {
+    padding: 10px;
+    position: relative;
+  }
+
+  &__info {
+    margin-top: 10px;
+  }
+
+  &__price {
+    @include flexBox(row, center, flex-start);
+
+    p {
+      color: $redColor;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 12px;
+      color: $textBlur;
+      text-decoration: line-through;
+    }
+  }
+}
