@@ -1,0 +1,43 @@
+@import '../../../css/base.scss';
+
+.blog__detail {
+    background-color: white;
+    display: flex;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    &__content {
+        background-color: $bgColorBase;
+        width: 75%;
+        padding: 16px 16px;
+        &__title {
+            color: $textRed;
+        }
+        &__author {
+            span, i {
+                font-family: 'Tahoma-mong';
+            }
+        }
+        &__inner {
+            margin-top: 16px;
+            &__text {
+                font-family: 'Tahoma-mong';
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            img {
+                width: unset;
+                margin-bottom: 10px;
+            }
+            &__tags {
+                font-family: 'Tahoma-mong';
+            }
+        }
+        &__separate {
+            margin: 24px 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    .blogs__similar {
+        padding-left: 16px;
+    }
+}

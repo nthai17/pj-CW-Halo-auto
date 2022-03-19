@@ -1,0 +1,23 @@
+@import '../../css/base.scss';
+
+.introduce {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &__text {
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: $textColor;
+            font-weight: 300 !important;
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__image {
+        margin-top: 20px;
+        &--second {
+            text-align: center;
+        }
+    }
+}

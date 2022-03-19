@@ -6,7 +6,9 @@ import Home from './component/home';
 import Products from './component/products';
 import ProductsDetail from './component/products/productDetails/detail'
 import Navigation from './component/Navigation';
-
+import Introduce from './component/introduce'
+import Blogs from './component/blogs'
+import BlogDetail from './component/blogs/detail'
 // lib
 import { useLocation } from 'react-router-dom'
 import Tab from "./component/products/productDetails/tabs";
@@ -31,6 +33,9 @@ function App() {
           <Route path='productPolicy' element={<Tab info="Policy" />}/>
           <Route path='productEvaluation' element={<Tab info="Evaluation" />}/>
         </Route>
+        <Route path="/introduce" element={<Introduce />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog/detail/:id" element={<BlogDetail />} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
 

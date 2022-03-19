@@ -2,10 +2,15 @@ $textColor: #333;
 $redColor: red;
 $textBlur: #999;
 $textRed: #ff2d37;
+$textRedBlur: #ff5059;
 $bgColorBase: #f5f5f5;
 $lightGray: #ebebeb;
 $yellowColor: #ffbe00;
 $greenColor: #80BB35;
+@font-face {
+    font-family: 'Tahoma-mong';
+    src: url('../assets/font/Tahoma-Regular-font.ttf')
+}
 @font-face {
     font-family: 'Tahoma-mong';
     src: url('../assets/font/Tahoma-Regular-font.ttf')
@@ -33,6 +38,9 @@ body {
 
 @mixin borderDefault {
     border: 1px solid #e5e5e5;
+}
+@mixin borderBtDefault {
+    border-bottom: 1px solid #e5e5e5;
 }
 @mixin borderNone {
     border: 1px solid #fff;
