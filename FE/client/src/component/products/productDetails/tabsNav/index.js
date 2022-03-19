@@ -3,7 +3,6 @@ import './index.scss';
 
 const TabNav = ({ category, id }) => {
   const navLinkClassName = (navLinkStatus) => {
-    console.log(navLinkStatus);
     return navLinkStatus.isActive ? 'nav-link-active' : ' ';
   };
 
