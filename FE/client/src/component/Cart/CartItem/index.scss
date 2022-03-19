@@ -1,0 +1,32 @@
+@import '../../../css/base.scss';
+
+.cart-item {
+  td {
+    text-align: center;
+    border: 1px solid $textBlur;
+  }
+
+  &__img {
+    width: 20%;
+  }
+
+  &__amount {
+    @include flexBox(row, center, center);
+
+    span {
+      width: 20%;
+      border-top: 1px solid $textBlur;
+      border-bottom: 1px solid $textBlur;
+    }
+    
+    a {
+      width: 20%;
+      border: 1px solid $textBlur;
+      cursor: pointer;
+    }
+  }
+
+  &__price, &__total {
+    color: $textRed;
+  }
+}

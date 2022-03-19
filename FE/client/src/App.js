@@ -12,6 +12,7 @@ import BlogDetail from './component/blogs/detail'
 // lib
 import { useLocation } from 'react-router-dom'
 import Tab from "./component/products/productDetails/tabs";
+import Cart from "./component/Cart";
 
 function App() {
   const { pathname } = useLocation()
@@ -36,6 +37,7 @@ function App() {
         <Route path="/introduce" element={<Introduce />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/detail/:id" element={<BlogDetail />} />
+        <Route path="/cart" element={<Cart />}></Route>
         <Route path='*' element={<NotFound/>} />
       </Routes>
 

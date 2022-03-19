@@ -12,13 +12,39 @@ import ProductItem from '../ProductItem';
 import '../productItem.scss';
 import '../../home/HomeSection/index.scss';
 import '../../../css/index.scss';
+import { useState } from 'react';
 
 function ProductsDetail() {
   const { id, category } = useParams();
   const productList = fakeData[category].listPreview;
   const product = fakeData[category].listPreview.find(item => item.id === Number(id));
+  const [amount, setAmount] = useState(1);
 
-  const items = ["Trang chủ", "Lốp xe"];
+  const handleOrder = () => {
+    if (localStorage.getItem('cart')) {
+      const productCart = JSON.parse(localStorage.getItem('cart'));
+      const existedProduct = productCart.find(item => item.id === product.id && item.name === product.name);
+      console.log(productCart);
+      console.log(existedProduct);
+      if (existedProduct) {
+        const newProductCart = productCart.map(item => {
+          if (item.id === product.id && item.name === product.name) {
+            console.log(item.amount);
+            console.log(amount);
+            return {...item, amount: Number(item.amount) + Number(amount)};;
+          } else {
+            return item;
+          }
+        })
+        localStorage.setItem('cart', JSON.stringify(newProductCart));
+      } else {
+        productCart.push({...product, amount: Number(amount)});
+        localStorage.setItem('cart', JSON.stringify(productCart));
+      }
+    } else {
+      const productCart = localStorage.setItem('cart', JSON.stringify([{...product, amount: Number(amount)}]));
+    }
+  };
 
   return (
       <section className="product-details">
@@ -26,7 +52,7 @@ function ProductsDetail() {
           <img src='https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/bg-bcrum.jpg?1638764971580' alt='breadcrumb-img'></img>
           <div className='breadcrumb__container'>
             <h3>{product.name}</h3>
-            <BreadCrumb items={items} last={product.name} />
+            <BreadCrumb items={["Trang chủ", "Lốp xe"]} last={product.name} />
           </div>
         </div>
         <div className='grid wide home__section__wrap'>
@@ -60,11 +86,17 @@ function ProductsDetail() {
               </div>
               <div className='product-details__order'>
                 <div>
-                  <button>-</button>
-                  <span>1</span>
-                  <button>+</button>
+                  <button onClick={() => setAmount(prevAmount => {
+                    if(prevAmount === 1) {
+                      return 1;
+                    } else {
+                      return prevAmount - 1;
+                    }
+                  })}>-</button>
+                  <span>{amount}</span>
+                  <button onClick={() => setAmount(prevAmount => prevAmount + 1)}>+</button>
                 </div>
-                <button className="btn__order">ĐẶT HÀNG</button>
+                <button className="btn__order" onClick={handleOrder}>ĐẶT HÀNG</button>
               </div>
               <p className='summary'>{product.summary}</p>
               <div className='media-icons'>
