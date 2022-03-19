@@ -1,13 +1,9 @@
 @import '../../../../css/base.scss';
 
-img {
-  width: 100%;
-}
-
 .discount__banner {
-  margin: 30px 0;
+  margin: 30px 0 10px;
   transition: 0.5s;
-
+  width: 100%;
   &:hover {
     opacity: 0.8;
   }

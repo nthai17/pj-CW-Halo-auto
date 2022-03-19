@@ -48,13 +48,7 @@ function ProductsDetail() {
 
   return (
       <section className="product-details">
-        <div className='breadcrumb-img'>
-          <img src='https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/bg-bcrum.jpg?1638764971580' alt='breadcrumb-img'></img>
-          <div className='breadcrumb__container'>
-            <h3>{product.name}</h3>
-            <BreadCrumb items={["Trang chủ", "Lốp xe"]} last={product.name} />
-          </div>
-        </div>
+        <BreadCrumb items={[{text: "Trang chủ", path: '/'}, {text: "Lốp xe", path: '/products'}]} last={product.name}/>
         <div className='grid wide home__section__wrap'>
           <div className='product-details__top row'>
             <div className='product-details__img col-lg-4'>
@@ -64,11 +58,11 @@ function ProductsDetail() {
               <h3>{product.name}</h3>
               <div className='rating'>
                 <div className='stars'>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
                 </div>
                 <span>Viết đánh giá của bạn</span>
               </div>
@@ -101,10 +95,10 @@ function ProductsDetail() {
               <p className='summary'>{product.summary}</p>
               <div className='media-icons'>
                 <label>Chia sẻ</label>
-                <a className='facebook'><i class="fa-brands fa-facebook"></i></a>
-                <a className='twitter'><i class="fa-brands fa-twitter"></i></a>
-                <a className='printer'><i class="fa-brands fa-pinterest"></i></a>
-                <a className='google'><i class="fa-brands fa-google-plus-g"></i></a>
+                <a className='facebook'><i className="fa-brands fa-facebook"></i></a>
+                <a className='twitter'><i className="fa-brands fa-twitter"></i></a>
+                <a className='printer'><i className="fa-brands fa-pinterest"></i></a>
+                <a className='google'><i className="fa-brands fa-google-plus-g"></i></a>
               </div>
             </div>
             <div className='trendy-products col-lg-3'>
@@ -113,7 +107,7 @@ function ProductsDetail() {
                 {productList.length > 0 && productList.map((item, index) => {
                   if (index < 4) {
                     return (
-                      <TrendyProduct category={category} product={item} />
+                      <TrendyProduct category={category} product={item} key={item.id}/>
                     )
                   }
                 })}
@@ -140,7 +134,7 @@ function ProductsDetail() {
                   <h1>SẢN PHẨM LIÊN QUAN</h1>
               </div>
               <div className='home__section__content flex alignItem-start justify-center background-white'>
-                  <div className='home__section__listDemo'>
+                  <div className='home__section__listDemo w-100'>
                       {productList.length &&
                         productList.map((item, index) => {
                           if (index < 5) {

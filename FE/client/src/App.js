@@ -21,10 +21,6 @@ function App() {
     <div className="App">
       {/* header here: Tuấn */}
 
-      {/* navigation */}
-      {pathname.length > 2 && 
-        <Navigation path={pathname}/>
-      }
       {/* content here */}
       <Routes>
         <Route path="/" element={<Home />} />
