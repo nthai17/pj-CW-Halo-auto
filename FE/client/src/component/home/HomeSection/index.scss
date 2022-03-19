@@ -20,11 +20,11 @@
         height: 410px;
     }
     &__leftImgage {
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 9;
-        width: 265px;
+        // position: absolute;
+        // left: 0;
+        // top: 0;
+        // z-index: 9;
+        width: 20%;
         height: 100%;
         img {
             width: 100%;
@@ -32,8 +32,10 @@
             object-fit: cover;
         }
     }
-    &__listDemo {
-        width: 100%;
+    &__wrap {
+        .home__section__listDemo {
+            width: 80%;
+        }
     }
 }
 .slick-next, .slick-prev {

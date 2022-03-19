@@ -10,8 +10,8 @@ function HomeSection(props) {
     const { list, leftImage, headerText, category } = props
     const setting = {
         speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 2,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         infinite: false,
         dots: false,
         arrows: true
