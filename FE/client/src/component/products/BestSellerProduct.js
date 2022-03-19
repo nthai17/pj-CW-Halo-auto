@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const BestSellerProduct = ({ list }) => {
-  console.log(list);
+  // console.log(list);
   const setting = {
     speed: 500,
     slidesToShow: 3,

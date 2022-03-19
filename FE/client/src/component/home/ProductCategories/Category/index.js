@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import './index.scss';
 
 const Category = ({ category }) => {
+  console.log(category)
   return (
     <div className="category">
       <Link to="/">
