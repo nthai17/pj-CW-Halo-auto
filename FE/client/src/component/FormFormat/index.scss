@@ -1,0 +1,41 @@
+@import '../../css/base.scss';
+
+.formFormat {
+    margin-top: 16px;
+    &__title {
+        color: $textColor;
+        font-family: 'Tahoma-mong';
+        font-size: 20px;
+    }
+    &__form {
+        margin-top: 12px;
+        min-width: 500px;
+        &__group {
+            margin-bottom: 12px;
+            input, textarea {
+                font-size: 16px;
+                font-family: 'Tahoma-mong';
+                outline: none;
+                @include borderDefault;
+                border-radius: 4px;
+                padding: 0 8px;
+                height: 40px;
+                width: 100%;
+            }
+            textarea {
+                height: 100px;
+                padding-top: 6px;
+            }
+        }
+        &__sumbitBtn {
+            button {
+                padding: 6px 12px;
+                min-width: 100px;
+                color: white;
+                &:hover {
+                    background-color: $textRedBlur;
+                }
+            }
+        }
+    }
+}
