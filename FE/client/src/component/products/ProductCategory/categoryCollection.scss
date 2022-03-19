@@ -1,0 +1,60 @@
+@import '../../../css/base.scss';
+
+.categoryCollection {
+    margin-bottom: 25px;
+    &__title {
+        font-family: "Tahoma-mong";
+        position: relative;
+        background-color: $textRed;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 12px;
+        padding-left: 90px;
+        border-bottom: 1px solid $textRed;
+        text-transform: uppercase;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: url(https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/icon-car.png?1638764971580) no-repeat scroll 8px 14px;
+            display: inline-block;
+            width: 60px;
+            height: 100%;
+            background-color: #bb0d0d;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+            
+        }
+    }
+}
+.categoryCollection__box {
+    background: none;
+    border: 1px solid #cdcdcd;
+    padding: 0 15px;
+    border-top: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.navItems {
+    color: #333;
+    background: transparent;
+    text-decoration: none !important;
+    font-size: 14px;
+    display: block;
+    border-bottom: 1px dashed #cdcdcd;
+    line-height: 18px;
+    padding: 10px 0px;
+    &-product {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.open-close {
+    height: 20px;
+    width: 20px;
+    line-height: 36px;
+    text-align: center;
+}

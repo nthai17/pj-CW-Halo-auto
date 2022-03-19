@@ -24,7 +24,7 @@ const ProductItemSlide = ({ data }) => {
             <span className="old-price">{formatPrice(data.oldPrice)}</span>
           </div>
           <button className="btn-buy">mua hàng</button>
-          <button><i class="fa fa-eye" aria-hidden="true"></i></button>
+          <button><i className="fa fa-eye" aria-hidden="true"/></button>
         </div>
       </div>
     </div>

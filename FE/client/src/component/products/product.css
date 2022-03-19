@@ -5,13 +5,8 @@
     font-family: 'Tahoma', sans-serif;
 }
 .products{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 90%;
     margin: 1rem auto;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 .best-seller-product{
     position: relative;
@@ -180,6 +175,13 @@ button {
     background: #ff2d37;
     color: #fff;
     padding: 5px;
-    width: 34px;
-    
+    width: 34px; 
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.category {
+    width: 20%;
+    height: 100vh;
 }
