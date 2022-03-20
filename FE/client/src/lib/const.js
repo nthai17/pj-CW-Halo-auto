@@ -299,6 +299,7 @@ export const topBranchsList = [
 export const bestSellerList = [
     {
         id: 1,
+        category: 'smartDivice',
         name: 'NHỚT CASTROL MAGNATEC',
         currentPrice: 460000,
         oldPrice: 660000,
@@ -307,6 +308,7 @@ export const bestSellerList = [
     },
     {
         id: 2,
+        category: 'accessory',
         name: 'RADIO Ô TÔ',
         currentPrice: 1200000,
         oldPrice: 1500000,
@@ -315,6 +317,7 @@ export const bestSellerList = [
     },
     {
         id: 3,
+        category: 'smartDivice',
         name: 'LỐP XE WARRIOR HUB',
         currentPrice: 1500000,
         oldPrice: 1800000,
@@ -323,6 +326,7 @@ export const bestSellerList = [
     },
     {
         id: 4,
+        category: 'smartDivice',
         name: 'LỐP XE WARRIOR HUB',
         currentPrice: 1500000,
         oldPrice: 1800000,
