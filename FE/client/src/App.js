@@ -5,7 +5,6 @@ import NotFound from './component/NotFound'
 import Home from './component/home';
 import Products from './component/products';
 import ProductsDetail from './component/products/productDetails/detail'
-import Navigation from './component/Navigation';
 import Introduce from './component/introduce'
 import Blogs from './component/blogs'
 import BlogDetail from './component/blogs/detail'
@@ -13,6 +12,8 @@ import BlogDetail from './component/blogs/detail'
 import { useLocation } from 'react-router-dom'
 import Tab from "./component/products/productDetails/tabs";
 import Cart from "./component/Cart";
+import Register from "./component/register";
+import Login from "./component/login";
 
 function App() {
   const { pathname } = useLocation()
@@ -34,6 +35,8 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/detail/:id" element={<BlogDetail />} />
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<Login />}></Route>
         <Route path='*' element={<NotFound/>} />
       </Routes>
 

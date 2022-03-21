@@ -9,21 +9,26 @@ function Form(props) {
         defaultForm,
         handleChange,
         hasTextArea = false,
-        textAreaIndexs = []
+        textAreaIndexs = [],
+        errors
     } = props
-
     const [formData, setFormData] = useState(defaultForm)
+
     const handleClick = (e) => {
         e.preventDefault()
-        handleSubmit && handleSubmit(formData)
+        handleSubmit && handleSubmit()
     }
     const change = (e, field) => {
-        setFormData({...formData, [field]: e.target.value })
+        setFormData({...formData, [field]: {...formData[field], value: e.target.value }})
     }
 
     useEffect(() => {
-        handleChange && handleChange(formData)
-    }, [formData, change])
+        const formOutput = {}
+        Object.keys(formData).forEach(item => {
+            formOutput[item] = formData[item].value
+        })
+        handleChange && handleChange(formOutput)
+    }, [formData])
 
     return ( 
         <div className="formFormat">
@@ -34,12 +39,25 @@ function Form(props) {
                         hasTextArea && textAreaIndexs.length && textAreaIndexs.includes(index) ?
                         (
                             <div className='formFormat__form__group' key={index}>
-                                <textarea onChange={(e) => change(e, item)} value={formData[item]}/>
+                                <textarea 
+                                    className={errors[item] && `formFormat__form__group--hasError`}
+                                    onChange={(e) => change(e, item)}
+                                    value={formData[item].value}
+                                    placeholder={formData[item].placeHolder}
+                                />
+                                <span className='formFormat__form__group__error'>{errors[item] || ''}</span>
                             </div>    
                         )
                         : (
                         <div className='formFormat__form__group' key={index}>
-                            <input onChange={(e) => change(e, item)} value={formData[item]}/>
+                            <input 
+                                type={item === 'password' ? 'password' : undefined}
+                                className={errors[item] && `formFormat__form__group--hasError`}
+                                onChange={(e) => change(e, item)} 
+                                value={formData[item].value}
+                                placeholder={formData[item].placeHolder}
+                            />
+                            <span className='formFormat__form__group__error'>{errors[item] || ''}</span>
                         </div>
                         )
                     )
