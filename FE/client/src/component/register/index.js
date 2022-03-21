@@ -4,7 +4,8 @@ import Form from '../FormFormat';
 import { useState } from 'react';
 
 function Register() {
-    const [formRegister, setFormRegister] = useState({lastName: '', firstName: '', phoneNumber: '', mail: '', password: ''})
+    const [formRegister, setFormRegister] = useState(
+        {lastName: '', firstName: '', userName: '', phoneNumber: '', mail: '', password: ''})
     const formRender = {
         lastName: {
             value: formRegister.lastName,
@@ -13,6 +14,10 @@ function Register() {
         firstName: {
             value: formRegister.firstName,
             placeHolder: 'Tên'
+        },
+        userName: {
+            value: formRegister.userName,
+            placeHolder: 'Tên đăng nhập'
         },
         phoneNumber: {
             value: formRegister.phoneNumber,
@@ -39,6 +44,7 @@ function Register() {
 
     const hasError = (form) => {
         const errors = {
+            userName: !form.userName ? 'Vui lòng nhập tên đăng nhập' : '',
             mail: !form.mail ? 'Vui lòng nhập email' : (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.mail)) ? '' : 'Email nhập chưa đúng',
             password: !form.password ? 'Vui lòng nhập password' : form.password.length < 6 ? 'Mật khẩu phải lớn hơn 6 ký tự' : '',
             lastName: !form.lastName ? 'Vui lòng nhập họ của bạn' : '',
@@ -54,7 +60,7 @@ function Register() {
 
     const handleSubmit = () => {
         if (!hasError(formRegister).status) {
-            console.log('đăng ký với sever', formRegister)
+            console.log('đăng ký với sever', {...formRegister, address: ''})
         } else {
             setFormError(hasError(formRegister).errors)
         }
