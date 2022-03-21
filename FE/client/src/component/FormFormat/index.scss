@@ -26,11 +26,21 @@
                 height: 100px;
                 padding-top: 6px;
             }
+            &__error {
+                font-family: 'Tahoma-mong';
+                font-size: 14px;
+                color: $textRed;
+                padding-left: 8px;
+            }
+            &--hasError {
+                border: 1px solid $textRed !important;
+            }
         }
         &__sumbitBtn {
             button {
                 padding: 6px 12px;
                 min-width: 100px;
+                min-height: 40px;
                 color: white;
                 &:hover {
                     background-color: $textRedBlur;

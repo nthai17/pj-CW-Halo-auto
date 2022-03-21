@@ -1,0 +1,20 @@
+@import '../../css//base.scss';
+
+.register {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    &__content {
+        font-size: 20px;
+        &__header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        &__form {
+            background-color: $bgColorBase;
+            padding: 10px 10px 20px;
+            width: 50vw;
+            margin: 0 auto;
+        }
+    }
+}
