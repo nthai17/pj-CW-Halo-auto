@@ -180,10 +180,13 @@
     }
     .flex-wrap {
         display: flex;
-        flex-wrap: wrap;
-    }
-    .category {
-        width: 20%;
-        height: 100vh;
+        justify-content: space-between;
+        .category {
+            width: 20%;
+        }
+        .categoryDetail{
+            width: 75%;
+        }
     }
 }
+

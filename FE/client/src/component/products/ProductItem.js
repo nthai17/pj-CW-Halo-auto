@@ -4,7 +4,7 @@ import { formatPrice } from '../../lib/until'
 
 const ProductItem = ({data, type, category}) => {
     const handleAddToCart = (data) => {
-        console.log(data);   
+        // console.log(data);   
     }
     return (
         <div className="product__item">
