@@ -4,10 +4,10 @@ import Form from '../FormFormat';
 import { useState } from 'react';
 
 function Login() {
-    const [formLogin, setFormRegister] = useState({mail: '', password: ''})
+    const [formLogin, setFormRegister] = useState({userName: '', password: ''})
     const formRender = {
-        mail: {
-            value: formLogin.mail,
+        userName: {
+            value: formLogin.userName,
             placeHolder: 'Email'
         },
         password: {
@@ -27,7 +27,7 @@ function Login() {
 
     const hasError = (form) => {
         const errors = {
-            mail: !form.mail ? 'Vui lòng nhập email' : (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.mail)) ? '' : 'Email nhập chưa đúng',
+            userName: !form.userName ? 'Vui lòng nhập tên đăng nhập' : '',
             password: !form.password ? 'Vui lòng nhập password' : form.password.length < 6 ? 'Mật khẩu phải lớn hơn 6 ký tự' : ''
         }
         const status = Object.keys(errors).some(item => !!errors[item] === true )

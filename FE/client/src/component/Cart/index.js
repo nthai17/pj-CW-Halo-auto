@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 const Cart = () => {
   const productList = JSON.parse(localStorage.getItem('cart'));
   const [products, setProducts] = useState(productList);
-  const itemsPrice = products.reduce((total, item) => total + (item.currentPrice * item.amount), 0);
-
+  let itemsPrice;
+  
   console.log(products);
   console.log(itemsPrice);
 
@@ -41,8 +41,16 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(products));
+    if(products) {
+      localStorage.setItem('cart', JSON.stringify(products));
+    }
   }, [products]);
+
+  if(products !== null && products.length > 0) {
+    itemsPrice = products.reduce((total, item) => total + (item.currentPrice * item.amount), 0);
+  } else {
+    return <div className='grid wide home__section__wrap mt-3 mb-3'>Không có sản phẩn nào, quay lại cửa hàng để mua sắm.</div>
+  }
 
   return (
     <section className='grid wide home__section__wrap'>
