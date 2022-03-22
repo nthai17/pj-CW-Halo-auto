@@ -1,0 +1,16 @@
+@import '../scss/variable.scss';
+
+.admin__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    background-color: $adminMainColor;
+    &__text {
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,166 @@
+@import '../scss/variable.scss';
+
+.admin {
+    height: 100vh;
+    &-login {
+        height: 100vh;
+    }
+    &-login-form {
+        width: 350px;
+        height: 300px;
+    }
+    &-content {
+        overflow-y: auto;
+        &::-webkit-scrollbar-thumb{
+            display: none;
+        }
+    }
+    &-btn {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: unset;
+        border: none;
+    }
+    &-area {
+        height: 300px;
+    }
+}
+.admin-filter-nav {
+    height: 50px;
+    background-color: $adminMainColor;
+}
+.admin-nav {
+    width: 100px;
+    background-color: $adminMainColor;
+    position: relative;
+    &-border {
+        position: absolute;
+        height: 20vh;
+        top: 0;
+        left: 0;
+        border: 4px solid $accountColor;
+        z-index: 0;
+        transition: all 0.5s ease;
+    }
+    &-item {
+        height: 20vh;
+        z-index: 10;
+        position: relative;
+        &:hover {
+            i {
+                color: $accountColor;
+            }
+        }
+        a.active {
+            color: $accountColor;
+        }
+    }
+    &-icon {
+        font-size: 4rem;
+    }
+}
+.admin-products-type {
+    position: relative;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.admin-products-table, .admin-orders-table {
+    overflow-x: auto;
+}
+.admin-add-btn:hover {
+    color: $blueColor;
+    i {
+        color: $blueColor;
+    }
+}
+.table-img {
+    width: 200px;
+    margin: 0 auto;
+}
+.table-address {
+    min-width: 140px;
+}
+.table-orders {
+    min-width: 200px;
+}
+.table-code {
+    max-width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table-btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 80px;
+    border-radius: 6px;
+    cursor: pointer;
+    &:hover {
+        background-color: $blueColor;
+        color: $whiteColor;
+    }
+}
+.table-desc {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    text-align: justify;
+    width: 300px;
+}
+.edit-modal {
+    background-color: $adminMainColor;
+    max-width: 100%;
+    width: 700px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.top {
+    &-0 {
+        top: 0
+    }
+    &-20 {
+        top: 20vh
+    }
+    &-40 {
+        top: 40vh
+    }
+    &-60 {
+        top: 60vh
+    }
+}
+.flex-1 {
+    flex: 1
+}
+.w-3 {
+    width: 3rem;
+}
+.h-100 {
+    height: 100%;
+}
+.text-white {
+    color: white;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
