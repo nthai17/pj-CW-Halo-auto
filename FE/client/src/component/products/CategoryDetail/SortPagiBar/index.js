@@ -4,9 +4,9 @@ import "./index.scss"
 const SortPagiBar = () => {
   return (
     <div className="sortPagiBar">
-      <label>Sắp xếp</label>
-      <ul>
-          <li>
+      <label>Sắp xếp: </label>
+      <ul className="pagiBar__list">
+          <li className="pagiBar__list__detail">
               <span>Thứ tự</span>
               <ul>
                   <li>Mặc định</li>

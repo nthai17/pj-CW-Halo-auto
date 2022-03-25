@@ -1,11 +1,14 @@
 export const fakeData = {
     tire: {
+
         bannerSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_product_images1.png?1646905627969',
         listPreview:
             [
                 {
                     id: 1,
                     name: 'Lốp xe WARRIOR HUB',
+                    brand: 'Audi',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -17,6 +20,7 @@ export const fakeData = {
                 {
                     id: 2,
                     name: 'Lốp xe WARRIOR HUB',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -28,6 +32,7 @@ export const fakeData = {
                 {
                     id: 3,
                     name: 'Lốp xe WARRIOR HUB',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -39,6 +44,7 @@ export const fakeData = {
                 {
                     id: 4,
                     name: 'Lốp xe WARRIOR HUB',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -50,6 +56,7 @@ export const fakeData = {
                 {
                     id: 5,
                     name: 'Lốp xe WARRIOR HUB',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -58,6 +65,7 @@ export const fakeData = {
                 {
                     id: 6,
                     name: 'Lốp xe WARRIOR HUB',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -75,6 +83,7 @@ export const fakeData = {
                 {
                     id: 1,
                     name: 'RADIO Ô TÔ',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -83,6 +92,7 @@ export const fakeData = {
                 {
                     id: 2,
                     name: 'RADIO Ô TÔ',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -91,6 +101,7 @@ export const fakeData = {
                 {
                     id: 3,
                     name: 'RADIO Ô TÔ',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -99,6 +110,7 @@ export const fakeData = {
                 {
                     id: 4,
                     name: 'RADIO Ô TÔ',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -107,6 +119,7 @@ export const fakeData = {
                 {
                     id: 5,
                     name: 'RADIO Ô TÔ',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -115,6 +128,7 @@ export const fakeData = {
                 {
                     id: 6,
                     name: 'RADIO Ô TÔ',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -128,6 +142,7 @@ export const fakeData = {
             {
                 id: 1,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -136,6 +151,7 @@ export const fakeData = {
             {
                 id: 2,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -144,6 +160,7 @@ export const fakeData = {
             {
                 id: 3,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -152,6 +169,7 @@ export const fakeData = {
             {
                 id: 4,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -160,6 +178,7 @@ export const fakeData = {
             {
                 id: 5,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -168,6 +187,7 @@ export const fakeData = {
             {
                 id: 6,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',

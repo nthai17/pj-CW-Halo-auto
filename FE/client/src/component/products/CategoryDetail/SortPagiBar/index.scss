@@ -1,6 +1,59 @@
 .sortPagiBar {
-    width: 50%;
-    float: left;
-    border: 1px solid #cdcdcd;
-    padding: 15px 15px;
+  width: 100%;
+  border: 1px solid #cdcdcd;
+  padding: 15px 15px;
+  display: flex;
+  label {
+    width: 20%;
+    line-height: 38px;
+    font-size: 14px;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+  .pagiBar__list {
+    list-style: none;
+    display: inline;
+    width: 70%;
+    padding: 0;
+    &__detail {
+      cursor: pointer;
+      position: relative;
+      width: 80%;
+      background-image: url(https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/ico-selects.png);
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding: 0 20px;
+      text-indent: 0.01px;
+      line-height: 36px;
+      border: 1px solid #cdcdcd;
+      font-size: 14px;
+      color: #333;
+      &:hover > ul{
+        opacity: 1;
+        visibility: visible;
+      }
+      ul {
+        z-index: 100;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        opacity: 0;
+        visibility: hidden;
+        li {
+          position: relative;
+          width: 100%;
+          margin: 0;
+          background-image: url(https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/ico-selects.png);
+          background-repeat: no-repeat;
+          background-position: right 10px center;
+          padding: 0 20px;
+          border: 1px solid #cdcdcd;
+          display: list-item;
+        }
+      }
+    }
+  }
 }
