@@ -4,10 +4,19 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../../../css/base.scss';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 function HomeSection(props) {
-    // console.log(props)
-    const { list, leftImage, headerText, category } = props
+    const { list, leftImage, headerText, category } = props;
+    const [productList, setProductList] = useState();
+
+    useEffect(() => {
+      axios.get('https://haluauto.herokuapp.com/product').then(res => setProductList(res.data.listProduct.filter(item => item.types === category)));
+    }, []);
+
+    console.log(productList);
+
     const setting = {
         speed: 500,
         slidesToShow: 4,
@@ -28,9 +37,9 @@ function HomeSection(props) {
                     <img className='home__section__leftImgage__img' src={leftImage}/>
                 </a>
                 <div className='home__section__listDemo'>
-                    {list.length &&
+                    {productList &&
                         <Slider {...setting}>
-                            {list.map(item => <ProductItem category={category} data={item} key={item.id}/>)}
+                            {productList.map(item => <ProductItem category={category} data={item} key={item._id}/>)}
                         </Slider>
                     }
                 </div>    
