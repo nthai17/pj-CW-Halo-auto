@@ -1,4 +1,4 @@
-import "./product.css";
+import "./product.scss";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../../lib/until";
 
@@ -8,7 +8,7 @@ const ProductItemSlide = ({ data }) => {
     <div className="wrap-box">
       <div className="product-box">
         <div className="product-thumbnail">
-          <Link to={`/product/detail/${data.id}`}>
+          <Link to={`/product/${data.category}/${data.id}`}>
             <img src={data.imgSrc} />
           </Link>
           <div className="sale-flash">{data.saleFlash}%</div>
@@ -24,7 +24,7 @@ const ProductItemSlide = ({ data }) => {
             <span className="old-price">{formatPrice(data.oldPrice)}</span>
           </div>
           <button className="btn-buy">mua hàng</button>
-          <button><i className="fa fa-eye" aria-hidden="true"/></button>
+          <button className="btn-eye"><i className="fa fa-eye" aria-hidden="true"/></button>
         </div>
       </div>
     </div>
