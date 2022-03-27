@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 450px;
-  background-color: #ccc;
+  background-color: #212529;
   .row {
     display: flex;
     height: 200px;
@@ -44,6 +44,7 @@
             no-repeat scroll -219px -19px;
         }
         p {
+          color: #fff;
           margin-left: 40px;
           font-family: "Tahoma-mong";
           font-size: 14px;
@@ -65,12 +66,14 @@
           height: 30px;
         }
         h1 {
+          color: #fff;
           width: 16%;
           margin-left: 40px;
           font-family: "Tahoma";
           font-size: 18px;
         }
         span {
+          color: #fff;
           font-family: "Tahoma-mong";
           font-size: 14px;
           padding-top: 2px;
@@ -85,6 +88,7 @@
         &__details, &__social{
             padding-left: 200px;
             .text{
+                color: #fff;
                 position: relative;
                 padding-left: 30px;
                 margin: 20px 0;
@@ -103,7 +107,7 @@
             &__link {
                 display: block;
                 font-family: 'Tahama-mong';
-                color: black;
+                color: #fff;
                 font-size: 18px;
                 padding-bottom: 10px;
             }
@@ -124,6 +128,7 @@
                     height: 100%;
                 }
                 p{
+                    color: #fff;
                     position: absolute;
                     top: 0;
                     left: 50px;
@@ -135,7 +140,9 @@
     }
   }
   .the-end{
+      color: #fff;
       position: absolute;
+      padding-bottom: 10px;
       bottom: 0;
       transform: translateX(100%);
   }

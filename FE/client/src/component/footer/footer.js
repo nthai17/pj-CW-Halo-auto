@@ -50,19 +50,19 @@ const Footer = () => {
           <div className="row__contact__social">
             <div className="text">Mạng xã hội</div>
             <NavLink className="row__contact__social__icon" to={"/"}>
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter"></i>
                 <p>Twitter</p>
             </NavLink>
             <NavLink className="row__contact__social__icon" to={"/"}>
-                <i class="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-facebook-f"></i>
                 <p>Facebook</p>
             </NavLink>
             <NavLink className="row__contact__social__icon" to={"/"}>
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
                 <p>Instagram</p>
             </NavLink>
             <NavLink className="row__contact__social__icon" to={"/"}>
-                <i class="fa-brands fa-youtube"></i>
+                <i className="fa-brands fa-youtube"></i>
                 <p>Youtube</p>
             </NavLink>
           </div>
@@ -71,7 +71,7 @@ const Footer = () => {
       <div className="the-end">
         © Bản quyền thuộc về Haluauto
         <span>|</span>
-        <span>Cung cấp bởi Tuấn Anh đẹp zai</span>
+        <span>Cung cấp bởi Bợm group</span>
       </div>
     </div>
   );

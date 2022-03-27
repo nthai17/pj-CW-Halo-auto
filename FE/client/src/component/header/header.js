@@ -13,7 +13,7 @@ const Header = () => {
           <NavLink className="nav-item" to={"/introduce"}>
             Giới thiệu
           </NavLink>
-          <NavLink className="nav-item" to={"/products"}>
+          <div className="nav-item">
             Sản phẩm
             <span className="nav-item__down">
               <i className="fa fa-angle-down" />
@@ -35,7 +35,7 @@ const Header = () => {
                 Sản phẩm khuyến mãi
               </NavLink>
             </div>
-          </NavLink>
+          </div>
           <NavLink className="nav-item" to={"/blogs"}>
             Tin tức
           </NavLink>
