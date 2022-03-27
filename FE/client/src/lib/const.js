@@ -1,231 +1,4 @@
-export const fakeData = {
-    tire: {
-
-        bannerSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_product_images1.png?1646905627969',
-        listPreview:
-            [
-                {
-                    id: 1,
-                    name: 'ZLốp xe WARRIOR HUB',
-                    brand: 'Audi',
-                    insurance: '12 tháng',
-                    type: 'tire',
-                    currentPrice: 500000,
-                    oldPrice: 1800000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20,
-                    brand: "Audi",
-                    status: "Còn hàng",
-                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
-                },
-                {
-                    id: 2,
-                    name: 'HLốp xe WARRIOR HUB',
-                    brand: 'Audi',
-                    insurance: '12 tháng',
-                    type: 'tire',
-                    currentPrice: 1500000,
-                    oldPrice: 1800000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20,
-                    brand: "Audi",
-                    status: "Còn hàng",
-                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
-                },
-                {
-                    id: 3,
-                    name: 'Lốp xe WARRIOR HUB',
-                    brand: 'Audi',
-                    insurance: '12 tháng',
-                    type: 'tire',
-                    currentPrice: 1500000,
-                    oldPrice: 1800000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20,
-                    brand: "Audi",
-                    status: "Còn hàng",
-                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
-                },
-                {
-                    id: 4,
-                    name: 'Lốp xe WARRIOR HUB',
-                    brand: 'Audi',
-                    insurance: '12 tháng',
-                    type: 'tire',
-                    currentPrice: 1500000,
-                    oldPrice: 1800000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20,
-                    brand: "Audi",
-                    status: "Còn hàng",
-                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
-                },
-                {
-                    id: 5,
-                    name: 'Lốp xe WARRIOR HUB',
-                    brand: 'Audi',
-                    type: 'tire',
-                    currentPrice: 1500000,
-                    oldPrice: 1800000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20
-                },
-                {
-                    id: 6,
-                    name: 'Lốp xe WARRIOR HUB',
-                    brand: 'Audi',
-                    type: 'tire',
-                    insurance: '12 tháng',
-                    currentPrice: 1500000,
-                    oldPrice: 1800000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
-                    saleFlash: 20,
-                    brand: "Audi",
-                    status: "Còn hàng",
-                    summary: "Lốp Xe Michelin Energy XM2 195/70R14  có tuổi thọ và khả năng tiết kiệm nhiên liệu cao, mang lại an toàn tối đa cho nhu cầu di chuyển hàng ngày của bạn. Lực cản lăn giảm 8% giúp giảm tiêu hao nhiên liệu. Công nghệ kỹ thuật bắc cầu qua lại tăng cường độ cứng cho khối gai. Với độ cứng được tăng cường, khối gai ít di chuyển tự do, giảm tỷ lệ mòn lốp Các khối liên kết với “kỹ thuật bắc cầu qua lại” làm hạn chế tính mềm dẻo, ngăn..."
-                }
-        ]
-    },
-    accessory: {
-        bannerSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_product_images2.png?1646905627969',
-        listPreview:
-            [
-                {
-                    id: 1,
-                    name: 'RADIO Ô TÔ',
-                    brand: 'Ford',
-                    insurance: '24 tháng',
-                    type: 'accessory',
-                    currentPrice: 1200000,
-                    oldPrice: 1500000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
-                    saleFlash: 20
-                },
-                {
-                    id: 2,
-                    name: 'RADIO Ô TÔ',
-                    brand: 'Ford',
-                    insurance: '24 tháng',
-                    type: 'accessory',
-                    currentPrice: 1200000,
-                    oldPrice: 1500000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
-                    saleFlash: 20
-                },
-                {
-                    id: 3,
-                    name: 'RADIO Ô TÔ',
-                    brand: 'Ford',
-                    insurance: '24 tháng',
-                    type: 'accessory',
-                    currentPrice: 1200000,
-                    oldPrice: 1500000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
-                    saleFlash: 20
-                },
-                {
-                    id: 4,
-                    name: 'RADIO Ô TÔ',
-                    brand: 'Ford',
-                    insurance: '24 tháng',
-                    type: 'accessory',
-                    currentPrice: 1200000,
-                    oldPrice: 1500000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
-                    saleFlash: 20
-                },
-                {
-                    id: 5,
-                    name: 'RADIO Ô TÔ',
-                    type: 'accessory',
-                    brand: 'Ford',
-                    insurance: '24 tháng',
-                    currentPrice: 1200000,
-                    oldPrice: 1500000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
-                    saleFlash: 20
-                },
-                {
-                    id: 6,
-                    name: 'RADIO Ô TÔ',
-                    brand: 'Audi',
-                    type: 'accessory',
-                    insurance: '12 tháng',
-                    currentPrice: 1200000,
-                    oldPrice: 1500000,
-                    imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
-                    saleFlash: 20
-                },
-            ]
-    },
-    smartDivice: {
-        bannerSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_product_images3.png?1646905627969',
-        listPreview: [
-            {
-                id: 1,
-                name: 'Đặc biệt',
-                brand: 'Audi',
-                insurance: '36 tháng',
-                type: 'smartDivice',
-                currentPrice: 460000,
-                oldPrice: 660000,
-                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
-                saleFlash: 20
-            },
-            {
-                id: 2,
-                name: 'NHỚT CASTROL MAGNATEC',
-                brand: 'Huyndai',
-                insurance: '36 tháng',
-                type: 'smartDivice',
-                currentPrice: 460000,
-                oldPrice: 660000,
-                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
-                saleFlash: 20
-            },
-            {
-                id: 3,
-                name: 'NHỚT CASTROL MAGNATEC',
-                brand: 'Huyndai',
-                type: 'smartDivice',
-                currentPrice: 460000,
-                oldPrice: 660000,
-                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
-                saleFlash: 20
-            },
-            {
-                id: 4,
-                name: 'NHỚT CASTROL MAGNATEC',
-                type: 'smartDivice',
-                brand: 'Huyndai',
-                currentPrice: 460000,
-                oldPrice: 660000,
-                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
-                saleFlash: 20
-            },
-            {
-                id: 5,
-                name: 'NHỚT CASTROL MAGNATEC',
-                type: 'smartDivice',
-                brand: 'Huyndai',
-                currentPrice: 460000,
-                oldPrice: 660000,
-                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
-                saleFlash: 20
-            },
-            {
-                id: 6,
-                name: 'NHỚT CASTROL MAGNATEC',
-                type: 'smartDivice',
-                brand: 'Huyndai',
-                currentPrice: 460000,
-                oldPrice: 660000,
-                imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
-                saleFlash: 20
-            },
-        ]
-    },
-    categoriesImg: [
+export const categoriesImg = [
       {
         imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_category_title1.jpg?1646905627969",
         title: "Lốp bánh xe"
@@ -250,8 +23,9 @@ export const fakeData = {
         imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_category_title6.jpg?1646905627969",
         title: "Phụ kiện"
       }
-    ],
-    categories: [
+    ]
+
+export const categories = [
       "Đèn ô tô",
       "Dầu nhớt",
       "Nội thất",
@@ -262,8 +36,9 @@ export const fakeData = {
       "Sản phẩm khuyến mãi",
       "Sản phẩm nổi bật",
       "Sản phẩm mới"
-    ],
-    policies: [
+    ]
+
+export const policies =[
       {
         imgSrc: "https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section-image-shipping1.png?1646905627969",
         title: "Miễn phí vận chuyển",
@@ -285,7 +60,6 @@ export const fakeData = {
         subTitle: "Thanh toán theo nhiều cách khác nhau"
       }
     ]
-}
 
 export const newsList = [
     {
@@ -427,3 +201,8 @@ export const listBlogs = [
     }
 ]
 
+export const banner = {
+    tire: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_product_images1.png?1646905627969',
+    accessory: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_product_images2.png?1646905627969',
+    smartDevice: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_product_images3.png?1646905627969'
+}

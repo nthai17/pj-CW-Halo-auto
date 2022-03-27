@@ -9,7 +9,7 @@ function TopBranchs({headerText, list}) {
                 <h1>{headerText}</h1>
             </div>
             <div className="home__topBranchs__list flex">
-                {list.length && list.map(item => <BranchImgItem src={item.imgSrc} name={item.name} id={item.key}/>)}
+                {list.length && list.map(item => <BranchImgItem src={item.imgSrc} name={item.name} key={item.id}/>)}
             </div>
         </div>
     );

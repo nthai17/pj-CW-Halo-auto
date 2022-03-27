@@ -5,25 +5,15 @@ import CategoryColection from "./ProductCategory/categoryCollection";
 import CategorySearch from "./ProductCategory/categorySearch";
 import SortPagiBar from "./CategoryDetail/SortPagiBar";
 import ProductsView from "./CategoryDetail/ProductsView";
-import { bestSellerList } from "../../lib/const";
 import { useState, useEffect, useRef } from "react";
-import { fakeData } from "../../lib/const";
+import axios from "axios";
 
 function Products() {
   const [currentPage, setCurrentPage] = useState(1);
   const [list, setList] = useState([]);
-  const { tire, accessory, smartDivice } = fakeData;
   const [filter, setFilter] = useState({});
   const [preFilterArr, setPreFilterArr] = useState([]);
-
-  // console.log(filter)
-
-  const defaultData = [
-    ...tire.listPreview,
-    ...accessory.listPreview,
-    ...smartDivice.listPreview,
-  ];
-
+  const defaultList = useRef()
   const listRender = (currentPage) => {
     const res = list.slice(16 * (currentPage - 1), 16 * currentPage);
     return res;
@@ -32,7 +22,10 @@ function Products() {
   const ref = useRef(false);
 
   useEffect(() => {
-    setList(defaultData);
+    axios.get('https://haluauto.herokuapp.com/product').then(res => {
+      defaultList.current = res.data.listProduct
+      setList(res.data.listProduct)
+    });
   }, []);
 
   useEffect(() => {
@@ -40,11 +33,8 @@ function Products() {
       const filterArr = Object.keys(filter).filter(
         (item) => !!filter[item] !== false
       );
-
-      // console.log(filterArr)
-      // console.log(list)
       const newList = (
-        filterArr.length > preFilterArr.length ? list : defaultData
+        filterArr.length > preFilterArr.length ? list : defaultList.current
       ).filter((item) => {
         return filterArr.every((i) => {
           if (i === "currentPrice") {
@@ -56,11 +46,11 @@ function Products() {
           return item[i] === filter[i];
         });
       });
-      // console.log(newList)
       if (newList.length) {
         setList(newList);
       } else {
-        setList(defaultData);
+        if (filterArr.length) setList([]);
+        else axios.get('https://haluauto.herokuapp.com/product').then(res => setList(res.data.listProduct));
       }
 
       setPreFilterArr(filterArr);
@@ -69,12 +59,10 @@ function Products() {
 
   const filterBrand = (brand) => {
     ref.current = true;
-    // console.log(brand);
     setFilter({ ...filter, brand: brand });
   };
 
   const filterPrice = (price) => {
-    // console.log(price)
     ref.current = true;
     setFilter({ ...filter, currentPrice: price });
   };
@@ -85,7 +73,6 @@ function Products() {
   };
 
   const handleSort = (order) => {
-    console.log(order);
     if (order === "asc") {
       const newList = list.sort((a, b) => {
         if (a.name > b.name) {
@@ -94,7 +81,6 @@ function Products() {
           return -1;
         }
       });
-      console.log(newList);
       setList([...newList]);
     }
     if (order === "desc") {
@@ -111,7 +97,7 @@ function Products() {
 
   return (
     <div className="products">
-      <BestSellerProduct list={bestSellerList} />
+      <BestSellerProduct list={list.slice(0, 4)} />
       <div className="flex-wrap">
         <div className="category">
           <CategoryColection />
@@ -123,7 +109,7 @@ function Products() {
           />
         </div>
         <div className="categoryDetail">
-          <SortPagiBar onChange={(order) => handleSort(order)} />
+          <SortPagiBar onChange={(order) => handleSort(order)} total={defaultList?.current?.length} count={listRender(currentPage).length}/>
           <ProductsView list={listRender(currentPage)} />
           <Pagination
             list={list}

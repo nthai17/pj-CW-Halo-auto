@@ -1,19 +1,20 @@
 @import '../../../../css/base.scss';
 
 .sortPagiBar {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 50px ;
   border: 1px solid #cdcdcd;
   border-radius: 5px;
-  padding: 15px 15px;
+  padding: 0 15px;
+  &__count {
+    font-family: 'Tahoma-mong';
+    font-weight: 600;
+  }
   &__row {
-    width: 100%;
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 72%;
-    transform: translateY(-50%);
     label {
       width: 80px;
       line-height: 35px;
@@ -28,6 +29,8 @@
       padding: 0;
       &__detail {
         font-family: "Tahoma-mong";
+        display: flex;
+        align-items: center;
         cursor: pointer;
         position: relative;
         width: 80%;
@@ -51,11 +54,20 @@
           background: #fff;
           left: 0;
           right: 0;
+          top: 110%;
           width: 100%;
           padding: 0;
           list-style: none;
           opacity: 0;
           visibility: hidden;
+          &::before {
+            content: '';
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            top: -4px;
+            left: 0;
+          }
           li {
             position: relative;
             width: 100%;

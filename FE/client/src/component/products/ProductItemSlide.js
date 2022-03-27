@@ -1,20 +1,21 @@
 import "./product.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { formatPrice } from "../../lib/until";
 
 const ProductItemSlide = ({ data }) => {
-  // console.log(data);
+  const navigate = useNavigate()
+
   return (
     <div className="wrap-box">
       <div className="product-box">
         <div className="product-thumbnail">
-          <Link to={`/product/${data.category}/${data.id}`}>
+          <Link to={`/product/${data.types}/${data._id}`}>
             <img src={data.imgSrc} />
           </Link>
           <div className="sale-flash">{data.saleFlash}%</div>
         </div>
         <div className="product-info">
-          <Link className="product-name" to={`/product/detail/${data.id}`}>
+          <Link className="product-name" to={`/product/${data.types}/${data._id}`}>
             {data.name}
           </Link>
           <div className="price-box">
@@ -23,8 +24,7 @@ const ProductItemSlide = ({ data }) => {
             </span>
             <span className="old-price">{formatPrice(data.oldPrice)}</span>
           </div>
-          <button className="btn-buy">mua hàng</button>
-          <button className="btn-eye"><i className="fa fa-eye" aria-hidden="true"/></button>
+          <button className="btn-buy" onClick={() => navigate(`/product/${data.types}/${data._id}`)}>mua hàng</button>
         </div>
       </div>
     </div>

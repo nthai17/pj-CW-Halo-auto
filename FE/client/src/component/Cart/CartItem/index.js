@@ -25,7 +25,7 @@ const CartItem = ({ product, increase, decrease, remove }) => {
         {formatPrice(product.amount * product.currentPrice)}
       </td>
       <td>
-        <a onClick={() => remove(product)}><i class="fa-solid fa-trash-can"></i></a>
+        <a onClick={() => remove(product)}><i className="fa-solid fa-trash-can"></i></a>
       </td>
     </tr>
   )

@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-import ProductItem from '../../products/ProductItem';
 import './index.scss';
 import SaleProduct from './SaleProduct';
+import axios from "axios";
 
-const DiscountProducts = ({ list, leftImage, headerText }) => {
+const DiscountProducts = ({ headerText }) => {
   const [days, setDays] = useState();
   const [hours, setHours] = useState();
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
+  const [listDiscout, setListDiscount] = useState([])
 
   let interval;
 
@@ -35,6 +36,7 @@ const DiscountProducts = ({ list, leftImage, headerText }) => {
   };
 
   useEffect(() => {
+    axios.get('https://haluauto.herokuapp.com/product').then(res => setListDiscount(res.data.listProduct.slice(0, 4)));
     startTimer();
     return () => {
       clearInterval(interval);
@@ -47,11 +49,11 @@ const DiscountProducts = ({ list, leftImage, headerText }) => {
                 <i className="fa-solid fa-angles-right"></i>
                 <h1>{headerText}</h1>
             </div>
-            <div className='background-white'>
+            <div className='background-white mt10'>
               <div className='flex alignItem-start row wrapper'>
                 <div className='countdown-timer col-md-2'>
                   <div className='countdown-timer__wrapper'>
-                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <i className="fa-solid fa-clock-rotate-left"></i>
                     <div className='countdown-timer__days'>
                       <div className='countdown-timer__top'><span>{days}</span></div>
                       <div className='countdown-timer__bottom'><span>NGÀY</span></div>
@@ -72,12 +74,12 @@ const DiscountProducts = ({ list, leftImage, headerText }) => {
                 </div>
                   <div className='discountProducts__container col-md-10'>
                     <div className='row'>
-                      {list.length && 
-                          list.map((item, index) => {
+                      {listDiscout.length && 
+                          listDiscout.map((item, index) => {
                             if (index < 4) {
                               return (
-                                <div className='col-md-6'>
-                                  <SaleProduct item={item} key={item.id} />
+                                <div className='col-md-6' key={index} >
+                                  <SaleProduct item={item} key={index} />
                                 </div>
                               )
                             }

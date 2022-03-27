@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const TrendyProduct = ({ product, category }) => {
   return (
-    <Link className='trendy-link' to={`/product/${category}/${product.id}`}>
+    <Link className='trendy-link' to={`/product/${category}/${product._id}`}>
       <div className="trendy-product d-flex">
         <div className="trendy-product__img col-lg-4">
           <img src={product.imgSrc} alt="image"></img>

@@ -32,7 +32,6 @@ function ModalEditProduct({onSubmit, onClose, data}) {
             delete formRequest.createdAt
             delete formRequest.updatedAt
             delete formRequest.__v
-            console.log(formData._id)
             onSubmit(formRequest, formData._id)
         }
     }

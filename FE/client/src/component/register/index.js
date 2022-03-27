@@ -60,7 +60,6 @@ function Register() {
 
     const handleSubmit = () => {
         if (!hasError(formRegister).status) {
-            console.log('đăng ký với sever', {...formRegister, address: ''})
         } else {
             setFormError(hasError(formRegister).errors)
         }

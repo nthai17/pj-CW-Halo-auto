@@ -13,8 +13,6 @@ const Tab = ({ info }) => {
     });
   }, []);
 
-  console.log(product);
-
   return (
     <div className="tab">
       {product && info === 'Infomation' ? <p>{product.desc}</p>

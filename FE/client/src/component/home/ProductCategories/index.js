@@ -22,7 +22,7 @@ const ProductCategories = ({ headerText, categories }) => {
       <div className="categories home__section__listDemo">
         {categories.length && 
             <Slider {...settings}>
-              {categories.map((category, index) => <div className="category__wrapper"><Category category={category} key={index} /></div>)}
+              {categories.map((category, index) => <div className="category__wrapper"  key={index} ><Category category={category}/></div>)}
             </Slider>
         }
       </div>

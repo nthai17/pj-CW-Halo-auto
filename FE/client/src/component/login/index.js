@@ -39,7 +39,6 @@ function Login() {
 
     const handleSubmit = () => {
         if (!hasError(formLogin).status) {
-            console.log('authentication với sever', formLogin)
         } else {
             setFormError(hasError(formLogin).errors)
         }

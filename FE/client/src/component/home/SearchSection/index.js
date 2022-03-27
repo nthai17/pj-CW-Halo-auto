@@ -2,11 +2,11 @@ import './index.scss';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { fakeData } from '../../../lib/const';
+import { categories } from '../../../lib/const';
+import { useNavigate } from 'react-router';
 
 const SearchSection = () => {
-  const { categories } = fakeData;
-
+  const navigate = useNavigate()
   const settings = {
     dots: true,
     infinite: true,
@@ -33,8 +33,8 @@ const SearchSection = () => {
                   <option>Chọn danh mục</option>
                   {categories.length > 0 && categories.map((cat, index) => <option key={index}>{cat}</option>)}
                 </select>
-                <button>
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                <button onClick={() => navigate('/products')}>
+                  <i className="fa-solid fa-magnifying-glass"></i>
                   <span>Tìm kiếm</span>
                 </button>
               </form>
