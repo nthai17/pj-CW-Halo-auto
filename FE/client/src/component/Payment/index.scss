@@ -1,0 +1,111 @@
+@import '../../css/base.scss';
+
+.payment {
+  &-total {
+    @include flexBox(row, center, space-between);
+
+    padding: 30px 0;
+    border-top: 1px solid $textBlur;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  &-confirm {
+    @include flexBox(row, center, space-between);
+
+    span {
+      color: #2a9dcc;
+    }
+
+    button {
+      background-color: #357ebd;
+      border-color: #2f71a9;
+      color: #ffffff;
+      padding: 15px 20px;
+      height: auto;
+    }
+  }
+
+  .form {
+    margin-right: 50px;
+
+    &__wrapper {
+      position: relative;
+      margin-bottom: 30px;
+
+      i {
+        visibility: hidden;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+      }
+
+      small {
+        visibility: hidden;
+        position: absolute;
+        bottom: -25px;
+        left: 3px;
+      }
+    }
+
+    .success {
+      input {
+        border: 3px solid #2ecc71;
+      }
+
+      i.fa-circle-check {
+        visibility: visible;
+        color: #2ecc71;
+      }
+    }
+
+    .error {
+      input {
+        border: 3px solid #e74c3c;
+      }
+
+      i.fa-circle-exclamation {
+        color: #e74c3c;
+        visibility: visible;
+      }
+
+      small {
+        visibility: visible;
+        color: #e74c3c;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      padding: 20px 20px;
+      border-radius: 10px;
+      border: 1px solid $lightGray;
+      transition: 0.2s;
+
+      &:focus {
+        outline: 3px solid #357ebd;
+      }
+
+      &:focus ~ .form__label {
+        top: 10px;
+        font-size: 12px;
+      }
+
+      &:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+        top: 10px;
+        font-size: 12px;
+      }
+    }
+
+    &__label {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      transition: 0.3s;
+    }
+  }
+}

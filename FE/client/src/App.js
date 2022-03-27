@@ -14,6 +14,8 @@ import Tab from "./component/products/productDetails/tabs";
 import Cart from "./component/Cart";
 import Register from "./component/register";
 import Login from "./component/login";
+import Payment from "./component/Payment";
+import PaymentSuccess from "./component/Payment/PaymentSuccess";
 
 function App() {
   const { pathname } = useLocation()
@@ -35,8 +37,10 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/detail/:id" element={<BlogDetail />} />
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/payment" element={<Payment />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/checkout" element={<PaymentSuccess />}></Route>
         <Route path='*' element={<NotFound/>} />
       </Routes>
 

@@ -1,0 +1,17 @@
+@import '../../../css/base.scss';
+
+.payment-success {
+  @include flexBox(column, center, center);
+  height: 99vh;
+
+  &__wrapper {
+    @include flexBox(column, center, space-between);
+    height: 50%;
+
+    i {
+      font-size: 150px;
+      color: #2ecc71;
+      transition: 0.5s;
+    }
+  }
+}

@@ -8,35 +8,32 @@ const Cart = () => {
   const productList = JSON.parse(localStorage.getItem('cart'));
   const [products, setProducts] = useState(productList);
   let itemsPrice;
-  
-  console.log(products);
-  console.log(itemsPrice);
 
   const increaseAmount = (product) => {
-    const existedProduct = products.find(item => item.id === product.id && item.name === product.name);
+    const existedProduct = products.find(item => item._id === product._id);
     if (existedProduct) {
       setProducts(
-        products.map(item => item.id === product.id && item.name === product.name ? {...item, amount: item.amount + 1} : item)
+        products.map(item => item._id === product._id ? {...item, amount: item.amount + 1} : item)
       )
     }
   };
 
   const decreaseAmount = (product) => {
-    const existedProduct = products.find(item => item.id === product.id && item.name === product.name);
+    const existedProduct = products.find(item => item._id === product._id);
     if (existedProduct.amount === 1) {
       setProducts(
-        products.filter(item => item.id !== product.id && item.name !== product.name)
+        products.filter(item => item._id !== product._id)
       ) 
     } else {
       setProducts(
-        products.map(item => item.id === product.id && item.name === product.name ? {...item, amount: item.amount - 1} : item)
+        products.map(item => item._id === product._id ? {...item, amount: item.amount - 1} : item)
       )
     }
   };
 
   const removeProduct = (product) => {
     setProducts(
-      products.filter(item => item.id !== product.id && item.name !== product.name)
+      products.filter(item => item._id !== product._id)
     ) 
   };
 
@@ -49,7 +46,15 @@ const Cart = () => {
   if(products !== null && products.length > 0) {
     itemsPrice = products.reduce((total, item) => total + (item.currentPrice * item.amount), 0);
   } else {
-    return <div className='grid wide home__section__wrap mt-3 mb-3'>Không có sản phẩn nào, quay lại cửa hàng để mua sắm.</div>
+    return <div className='grid wide home__section__wrap mt-3 mb-3'>Không có sản phẩn nào, quay lại cửa hàng để mua sắm.
+      <div>
+        <Link to="/">
+          <div className='payment__continue mt-5'>
+            tiếp tục mua hàng
+          </div>
+        </Link>
+      </div>
+    </div>
   }
 
   return (
@@ -85,9 +90,11 @@ const Cart = () => {
             <div className='left'>Tổng tiền thanh toán</div>
             <div className='right'>{formatPrice(itemsPrice)}</div>
           </div>
-          <div className='payment__proceed'>
-            <a>tiến hành thanh toán</a>
-          </div>
+          <Link to="/payment">
+            <div className='payment__proceed'>
+              <a>tiến hành thanh toán</a>
+            </div>
+          </Link>
         </div>
       </div>
     </section>
