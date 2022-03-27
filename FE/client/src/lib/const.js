@@ -1,12 +1,16 @@
 export const fakeData = {
     tire: {
+
         bannerSrc: 'https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/section_product_images1.png?1646905627969',
         listPreview:
             [
                 {
                     id: 1,
-                    name: 'Lốp xe WARRIOR HUB',
-                    currentPrice: 1500000,
+                    name: 'ZLốp xe WARRIOR HUB',
+                    brand: 'Audi',
+                    insurance: '12 tháng',
+                    type: 'tire',
+                    currentPrice: 500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
                     saleFlash: 20,
@@ -16,7 +20,10 @@ export const fakeData = {
                 },
                 {
                     id: 2,
-                    name: 'Lốp xe WARRIOR HUB',
+                    name: 'HLốp xe WARRIOR HUB',
+                    brand: 'Audi',
+                    insurance: '12 tháng',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -28,6 +35,9 @@ export const fakeData = {
                 {
                     id: 3,
                     name: 'Lốp xe WARRIOR HUB',
+                    brand: 'Audi',
+                    insurance: '12 tháng',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -39,6 +49,9 @@ export const fakeData = {
                 {
                     id: 4,
                     name: 'Lốp xe WARRIOR HUB',
+                    brand: 'Audi',
+                    insurance: '12 tháng',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -50,6 +63,8 @@ export const fakeData = {
                 {
                     id: 5,
                     name: 'Lốp xe WARRIOR HUB',
+                    brand: 'Audi',
+                    type: 'tire',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -58,6 +73,9 @@ export const fakeData = {
                 {
                     id: 6,
                     name: 'Lốp xe WARRIOR HUB',
+                    brand: 'Audi',
+                    type: 'tire',
+                    insurance: '12 tháng',
                     currentPrice: 1500000,
                     oldPrice: 1800000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623343',
@@ -75,6 +93,9 @@ export const fakeData = {
                 {
                     id: 1,
                     name: 'RADIO Ô TÔ',
+                    brand: 'Ford',
+                    insurance: '24 tháng',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -83,6 +104,9 @@ export const fakeData = {
                 {
                     id: 2,
                     name: 'RADIO Ô TÔ',
+                    brand: 'Ford',
+                    insurance: '24 tháng',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -91,6 +115,9 @@ export const fakeData = {
                 {
                     id: 3,
                     name: 'RADIO Ô TÔ',
+                    brand: 'Ford',
+                    insurance: '24 tháng',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -99,6 +126,9 @@ export const fakeData = {
                 {
                     id: 4,
                     name: 'RADIO Ô TÔ',
+                    brand: 'Ford',
+                    insurance: '24 tháng',
+                    type: 'accessory',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -107,6 +137,9 @@ export const fakeData = {
                 {
                     id: 5,
                     name: 'RADIO Ô TÔ',
+                    type: 'accessory',
+                    brand: 'Ford',
+                    insurance: '24 tháng',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -115,6 +148,9 @@ export const fakeData = {
                 {
                     id: 6,
                     name: 'RADIO Ô TÔ',
+                    brand: 'Audi',
+                    type: 'accessory',
+                    insurance: '12 tháng',
                     currentPrice: 1200000,
                     oldPrice: 1500000,
                     imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817',
@@ -127,7 +163,10 @@ export const fakeData = {
         listPreview: [
             {
                 id: 1,
-                name: 'NHỚT CASTROL MAGNATEC',
+                name: 'Đặc biệt',
+                brand: 'Audi',
+                insurance: '36 tháng',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -136,6 +175,9 @@ export const fakeData = {
             {
                 id: 2,
                 name: 'NHỚT CASTROL MAGNATEC',
+                brand: 'Huyndai',
+                insurance: '36 tháng',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -144,6 +186,8 @@ export const fakeData = {
             {
                 id: 3,
                 name: 'NHỚT CASTROL MAGNATEC',
+                brand: 'Huyndai',
+                type: 'smartDivice',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -152,6 +196,8 @@ export const fakeData = {
             {
                 id: 4,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
+                brand: 'Huyndai',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -160,6 +206,8 @@ export const fakeData = {
             {
                 id: 5,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
+                brand: 'Huyndai',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -168,6 +216,8 @@ export const fakeData = {
             {
                 id: 6,
                 name: 'NHỚT CASTROL MAGNATEC',
+                type: 'smartDivice',
+                brand: 'Huyndai',
                 currentPrice: 460000,
                 oldPrice: 660000,
                 imgSrc: 'https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077',
@@ -299,6 +349,7 @@ export const topBranchsList = [
 export const bestSellerList = [
     {
         id: 1,
+        category: 'smartDivice',
         name: 'NHỚT CASTROL MAGNATEC',
         currentPrice: 460000,
         oldPrice: 660000,
@@ -307,6 +358,7 @@ export const bestSellerList = [
     },
     {
         id: 2,
+        category: 'accessory',
         name: 'RADIO Ô TÔ',
         currentPrice: 1200000,
         oldPrice: 1500000,
@@ -315,6 +367,7 @@ export const bestSellerList = [
     },
     {
         id: 3,
+        category: 'smartDivice',
         name: 'LỐP XE WARRIOR HUB',
         currentPrice: 1500000,
         oldPrice: 1800000,
@@ -323,6 +376,7 @@ export const bestSellerList = [
     },
     {
         id: 4,
+        category: 'smartDivice',
         name: 'LỐP XE WARRIOR HUB',
         currentPrice: 1500000,
         oldPrice: 1800000,
@@ -372,3 +426,4 @@ export const listBlogs = [
         Với xe sang người ta xem đó vừa là phương tiện vừa có giá trị hình ảnh, thương hiệu dài lâu. Còn xe phổ thông thì không bằng, khách chỉ nhắm đến việc giữ giá hay ít tốn chi phí, không quan tâm lắm trải nghiệm và hưởng thụ cho mình.`
     }
 ]
+

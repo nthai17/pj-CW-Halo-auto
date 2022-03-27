@@ -1,0 +1,44 @@
+@import "../../../css/base.scss";
+.categorySearch {
+  &__box {
+    padding: 10px 15px 0;
+    border: 1px solid #cdcdcd;
+    border-top: none;
+  }
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.14286em;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+  }
+  &__checklist {
+    cursor: pointer;
+    line-height: 2.5em;
+    min-width: 100%;
+    .listCheckBox {
+      padding: 0;
+      max-height: 140px;
+      overflow-y: auto;
+      &__none {
+        padding: 0;
+        overflow-y: hidden;
+      }
+    }
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-family: "Tahoma-mong";
+    width: 100%;
+    font-size: 1em;
+    color: #6f6f6f;
+    font-weight: normal;
+    input {
+      margin-right: 15px;
+    }
+  }
+}
+

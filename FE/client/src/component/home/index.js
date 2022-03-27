@@ -24,7 +24,7 @@ const Home = () => {
                 <DiscountProducts list={tire.listPreview} leftImage={tire.bannerSrc} headerText='SẢN PHẨM ĐANG GIẢM GIÁ'/>
                 <HomeSection category="tire" list={tire.listPreview} leftImage={tire.bannerSrc} headerText='LỐP BÁNH XE'/>
                 <HomeSection category="accessory" list={accessory.listPreview} leftImage={accessory.bannerSrc} headerText='PHỤ KIỆN'/>
-                <HomeSection category="smartDivice" list={smartDivice.listPreview} leftImage={smartDivice.bannerSrc} headerText='THIẾT BỊ THÔNG MINH'/>  
+                <HomeSection category="smartDevice" list={smartDivice.listPreview} leftImage={smartDivice.bannerSrc} headerText='THIẾT BỊ THÔNG MINH'/>  
                 <NewsSection list={newsList}/>
                 <TopBranchs list={topBranchsList} headerText='TOP THƯƠNG HIỆU'/>  
             </div>
