@@ -136,7 +136,7 @@ const CategoryColection = () => {
             )}
           </li>
           <li>
-            <NavLink className="navItems" to={"/"}>
+            <NavLink className="navItems" to={"/blogs"}>
               Tin tức
             </NavLink>
           </li>
