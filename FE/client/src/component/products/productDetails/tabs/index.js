@@ -8,7 +8,7 @@ const Tab = ({ info }) => {
   const [product, setProduct] = useState();
 
   useEffect(() => {
-    axios.get('https://haluauto.herokuapp.com/product').then(res => {
+    axios.get(process.env.REACT_APP_API_PRODUCT).then(res => {
       setProduct(res.data.listProduct.find(item => item._id === id));
     });
   }, []);

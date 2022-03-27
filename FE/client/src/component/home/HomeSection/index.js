@@ -12,7 +12,7 @@ function HomeSection(props) {
     const [productList, setProductList] = useState([]);
 
     useEffect(() => {
-      axios.get('https://haluauto.herokuapp.com/product').then(res => setProductList(res.data.listProduct.filter(item => item.types === category)));
+      axios.get(process.env.REACT_APP_API_PRODUCT).then(res => setProductList(res.data.listProduct.filter(item => item.types === category)));
     }, []);
 
     const setting = {

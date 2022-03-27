@@ -22,7 +22,7 @@ function Products() {
   const ref = useRef(false);
 
   useEffect(() => {
-    axios.get('https://haluauto.herokuapp.com/product').then(res => {
+    axios.get(process.env.REACT_APP_API_PRODUCT).then(res => {
       defaultList.current = res.data.listProduct
       setList(res.data.listProduct)
     });
@@ -50,7 +50,7 @@ function Products() {
         setList(newList);
       } else {
         if (filterArr.length) setList([]);
-        else axios.get('https://haluauto.herokuapp.com/product').then(res => setList(res.data.listProduct));
+        else axios.get(process.env.REACT_APP_API_PRODUCT).then(res => setList(res.data.listProduct));
       }
 
       setPreFilterArr(filterArr);

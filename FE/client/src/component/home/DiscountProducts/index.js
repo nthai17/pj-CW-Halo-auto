@@ -36,7 +36,7 @@ const DiscountProducts = ({ headerText }) => {
   };
 
   useEffect(() => {
-    axios.get('https://haluauto.herokuapp.com/product').then(res => setListDiscount(res.data.listProduct.slice(0, 4)));
+    axios.get(process.env.REACT_APP_API_PRODUCT).then(res => setListDiscount(res.data.listProduct.slice(0, 4)));
     startTimer();
     return () => {
       clearInterval(interval);
