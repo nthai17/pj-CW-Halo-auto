@@ -1,0 +1,134 @@
+@import "../../css/base.scss";
+
+.header {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  &__main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0px 30px;
+    background-color: #fff;
+    display: flex;
+    .logo {
+      display: inline-block;
+      width: 300px;
+      padding: 15px 0;
+      background-image: url("https://bizweb.dktcdn.net/thumb/medium/100/364/158/themes/802198/assets/logo.png?1648090003092");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .main-nav {
+      padding: 0 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .nav-item {
+        position: relative;
+        height: 50px;
+        line-height: 40px;
+        list-style: none;
+        margin: 0px 20px;
+        font-family: "Tahoma";
+        color: #555;
+        &:hover > div {
+          opacity: 1;
+          visibility: visible;
+        }
+        &__down {
+          padding-left: 10px;
+        }
+        &__products {
+          z-index: 100;
+          position: absolute;
+          width: 230px;
+          height: 150px;
+          background-color: #fff;
+          transform: translateY(5px);
+          border: 1px solid #cdcdcd;
+          opacity: 0;
+          visibility: hidden;
+          &__details {
+            display: block;
+            position: relative;
+            font-family: "Tahoma-mong";
+            color: #555;
+            padding: 5px 15px;
+            &:hover{
+              background-color: #cdcdcd;
+            }
+            &__down {
+              position: absolute;
+              right: 15px;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+    .box-right {
+      z-index: 100;
+      position: absolute;
+      right: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      &__search,
+      &__cart,
+      &__user {
+        position: relative;
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        line-height: 36px;
+        margin-left: 30px;
+        cursor: pointer;
+        &::before{
+          content: "";
+          width: 50px;
+          height: 40px;
+          position: absolute;
+          top: 10px;
+          right: -15px;
+          z-index: 9;
+        }
+        &:hover{
+          border: 2px solid red;
+        }
+        &:hover > div{
+          opacity: 1;
+          visibility:visible;
+        }
+        .details {
+          position: absolute;
+          right: 0;
+          width: 120px;
+          height: 75px;
+          background-color: #fff;
+          transform: translateY(5px);
+          border: 1px solid #cdcdcd;
+          opacity: 0;
+          visibility:hidden;
+          .account {
+            display: block;
+            font-family:"Tahoma-mong";
+            text-align: center;
+            color: #555;
+            &:hover{
+              background-color: #cdcdcd;
+            }
+          }
+        }
+        i {
+          font-size: 18px;
+          color: #555;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

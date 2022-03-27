@@ -2,9 +2,12 @@ import './index.scss'
 import { listBlogs } from '../../lib/const'
 import BlogItem from './blogItem'
 import {Link} from 'react-router-dom'
+import BreadCrumb from '../products/breadCrumb/breadcrumb'
 
 function Blogs() {
     return ( 
+        <>
+        <BreadCrumb items={[{text: "Trang chủ", path:'/'}]} last='Tin tức'/>
         <div className="blogs">
             <div className="grid wide">
                 <div className="row">
@@ -30,6 +33,7 @@ function Blogs() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

@@ -1,6 +1,6 @@
 export const formatPrice = (price) => {
-    const priceString = price.toString()
-    const resPrice = priceString.split('').reverse()
+    const priceString = price?.toString()
+    const resPrice = priceString?.split('').reverse() || []
     if (resPrice.length > 3) {
         priceString.split('').reverse().forEach((t,index) => {
             if ([3,6,9].includes(index)) {

@@ -5,6 +5,7 @@ import CategoryColection from "./ProductCategory/categoryCollection";
 import CategorySearch from "./ProductCategory/categorySearch";
 import SortPagiBar from "./CategoryDetail/SortPagiBar";
 import ProductsView from "./CategoryDetail/ProductsView";
+import BreadCrumb from "./breadCrumb/breadcrumb";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
@@ -96,6 +97,8 @@ function Products() {
   };
 
   return (
+    <>
+    <BreadCrumb items={[{text: "Trang chủ", path:'/'}]} last='Sản phẩm'/>
     <div className="products">
       <BestSellerProduct list={list.slice(0, 4)} />
       <div className="flex-wrap">
@@ -119,6 +122,8 @@ function Products() {
         </div>
       </div>
     </div>
+    </>
+    
   );
 }
 
