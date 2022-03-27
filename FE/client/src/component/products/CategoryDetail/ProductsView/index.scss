@@ -1,10 +1,14 @@
 .products-view{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
-
+    margin-top: 20px;
+    .hasNoProduct {
+        text-align: center;
+        width: 100%;
+    }
     .product__item{
         width: 25%;
         margin-bottom: 16px;
+        flex: unset
     }
 }

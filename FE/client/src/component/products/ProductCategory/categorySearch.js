@@ -20,25 +20,17 @@ const arrInsur = [
   { label: "36 tháng", id: 3 },
 ];
 
-const CategorySearch = ({ list, filterBrand, filterPrice, filterInsur }) => {
-  // console.log(list);
+const CategorySearch = ({ filterBrand, filterPrice, filterInsur }) => {
   const [filterBrandList, setFilterBrandList] = useState(arr);
   const [filterPriceList, setFilterPriceList] = useState(arrPrice);
   const [filterInsurList, setFilterInsurList] = useState(arrInsur);
 
-  const listFilterBrand = list.map((item) => item.brand);
-  const listFilterInsurList = list;
-  const renderFirterBrand = Array.from(new Set(listFilterBrand));
-  // console.log(arr)
-
   const handlePrice = (string) => {
-    // console.log(string)
     if (filterPriceList.length === 1) {
       setFilterPriceList(arrPrice);
       filterPrice('');
     } else {
       const newArr = arrPrice.filter((Price) => Price.value === string);
-      console.log(newArr)
       setFilterPriceList(newArr);
       filterPrice(string);
     }
@@ -56,7 +48,6 @@ const CategorySearch = ({ list, filterBrand, filterPrice, filterInsur }) => {
   };
 
   const handleInsur = (month) => {
-    // console.log(month)
     if (filterInsurList.length === 1) {
       setFilterInsurList(arrInsur);
       filterInsur("");
@@ -76,16 +67,7 @@ const CategorySearch = ({ list, filterBrand, filterPrice, filterInsur }) => {
           <div className="categorySearch__checklist">
             <ul className="listCheckBox">
               {filterPriceList.map((item) => {
-                return (
-                  <label
-                    key={item.id}
-                    className="categorySearch__checkbox"
-                    onClick={() => handlePrice(item.value)}
-                  >
-                    <input type={"checkbox"} />
-                    {item.label}
-                  </label>
-                );
+                return <CheckboxItem item={item} key={item.id} type='price' handleClick={(value) => handlePrice(value)}/>
               })}
             </ul>
           </div>
@@ -96,16 +78,7 @@ const CategorySearch = ({ list, filterBrand, filterPrice, filterInsur }) => {
           <div className="categorySearch__checklist">
             <ul className="listCheckBox">
               {filterBrandList.map((item) => {
-                return (
-                  <label
-                    key={item.id}
-                    className="categorySearch__checkbox"
-                    onClick={() => handleBrand(item.label)}
-                  >
-                    <input type={"checkbox"} />
-                    {item.label}
-                  </label>
-                );
+                return <CheckboxItem item={item} key={item.id} type='brand' handleClick={(value) => handleBrand(value)}/>
               })}
             </ul>
           </div>
@@ -116,16 +89,7 @@ const CategorySearch = ({ list, filterBrand, filterPrice, filterInsur }) => {
           <div className="categorySearch__checklist">
             <ul className="listCheckBox__none">
               {filterInsurList.map((item) => {
-                return (
-                  <label
-                    className="categorySearch__checkbox"
-                    key={item.id}
-                    onClick={() => handleInsur(item.label)}
-                  >
-                    <input type={"checkbox"} />
-                    {item.label}
-                  </label>
-                );
+                return <CheckboxItem item={item} key={item.id} type='insur' handleClick={(value) => handleInsur(value)}/>
               })}
             </ul>
           </div>
@@ -136,3 +100,22 @@ const CategorySearch = ({ list, filterBrand, filterPrice, filterInsur }) => {
 };
 
 export default CategorySearch;
+
+export const CheckboxItem = ({item, handleClick, type}) => {
+  const [isCheck, setIsCheck] = useState(false)
+  return (
+    <div
+      key={item.id}
+      className="categorySearch__checkbox"
+      onClick={() => {
+        setIsCheck(!isCheck)
+        handleClick(type ==='price' ? item.value : item.label)
+      }}
+    >
+      <div className={isCheck ? 'inputCheckBox isCheck' : 'inputCheckBox'}></div>
+      <label>
+        {item.label}
+      </label>
+    </div>
+  );
+}

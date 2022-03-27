@@ -1,13 +1,10 @@
 import { useParams } from 'react-router-dom';
-import { fakeData } from '../../../lib/const';
 import BreadCrumb from '../breadCrumb/breadcrumb';
 import './index.scss';
 import { formatPrice } from '../../../lib/until';
 import TrendyProduct from './trendyProduct';
 import TabNav from './tabsNav';
-import { Routes, Route, Outlet } from "react-router-dom";
-import Tab from './tabs';
-import Home from '../../home';
+import { Outlet } from "react-router-dom";
 import ProductItem from '../ProductItem';
 import '../productItem.scss';
 import '../../home/HomeSection/index.scss';
@@ -21,27 +18,26 @@ function ProductsDetail() {
   const [productList, setProductList] = useState();
 
   useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
     axios.get('https://haluauto.herokuapp.com/product').then(res => {
       setProduct(res.data.listProduct.find(item => item._id === id));
       setProductList(res.data.listProduct.filter(item => item.types === category));
     });
-  }, []);
-
-  console.log(product);
+  }, [id, category]);
   
   const [amount, setAmount] = useState(1);
 
   const handleOrder = () => {
     if (localStorage.getItem('cart')) {
       const productCart = JSON.parse(localStorage.getItem('cart'));
-      const existedProduct = productCart.find(item => item.id === product.id && item.name === product.name);
-      console.log(productCart);
-      console.log(existedProduct);
+      const existedProduct = productCart.find(item => item._id === product._id && item.name === product.name);
       if (existedProduct) {
         const newProductCart = productCart.map(item => {
-          if (item.id === product.id && item.name === product.name) {
-            console.log(item.amount);
-            console.log(amount);
+          if (item._id === product._id && item.name === product.name) {
             return {...item, amount: Number(item.amount) + Number(amount)};;
           } else {
             return item;
@@ -81,10 +77,10 @@ function ProductsDetail() {
                   </div>
                   <div className='brand-status'>
                     <div>
-                      Thương hiêu: {product.brand ? <span>{product.brand}</span> : <span>Đang cập nhật</span>}
+                      Thương hiệu: {product.brand ? <span>{product.brand}</span> : <span>Đang cập nhật</span>}
                     </div>
                     <div>
-                      Tình trạng: {product.status ? <span>{product.status}</span> : <span>Hết hàng</span>}
+                      Tình trạng: {<span>Còn hàng</span>}
                     </div>
                   </div>
                   <div className='prices'>
@@ -120,7 +116,7 @@ function ProductsDetail() {
                     {productList && productList.map((item, index) => {
                       if (index < 4) {
                         return (
-                          <TrendyProduct category={category} product={item} key={item.id}/>
+                          <TrendyProduct category={category} product={item} key={item._id}/>
                         )
                       }
                     })}
@@ -152,7 +148,7 @@ function ProductsDetail() {
                             productList.map((item, index) => {
                               if (index < 5) {
                                 return (
-                                    <ProductItem category={category} data={item} key={item.id}/>
+                                    <ProductItem category={category} data={item} key={item._id}/>
                                 )
                               } 
                             })

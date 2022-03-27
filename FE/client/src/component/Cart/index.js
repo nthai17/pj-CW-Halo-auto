@@ -73,7 +73,7 @@ const Cart = () => {
         <tbody>
           {products.length > 0 && (
             products.map(product => (
-              <CartItem product={product} increase={increaseAmount} decrease={decreaseAmount} remove={removeProduct} />
+              <CartItem key={product._id} product={product} increase={increaseAmount} decrease={decreaseAmount} remove={removeProduct} />
             ))
           )}
         </tbody>

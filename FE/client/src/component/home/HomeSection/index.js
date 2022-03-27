@@ -8,14 +8,12 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function HomeSection(props) {
-    const { list, leftImage, headerText, category } = props;
-    const [productList, setProductList] = useState();
+    const { leftImage, headerText, category } = props;
+    const [productList, setProductList] = useState([]);
 
     useEffect(() => {
       axios.get('https://haluauto.herokuapp.com/product').then(res => setProductList(res.data.listProduct.filter(item => item.types === category)));
     }, []);
-
-    console.log(productList);
 
     const setting = {
         speed: 500,
@@ -37,10 +35,12 @@ function HomeSection(props) {
                     <img className='home__section__leftImgage__img' src={leftImage}/>
                 </a>
                 <div className='home__section__listDemo'>
-                    {productList &&
+                    {productList.length ?
                         <Slider {...setting}>
                             {productList.map(item => <ProductItem category={category} data={item} key={item._id}/>)}
                         </Slider>
+                        :
+                        <div className='home__section__listDemo__noProductMessage'>Loading....</div>
                     }
                 </div>    
             </div>

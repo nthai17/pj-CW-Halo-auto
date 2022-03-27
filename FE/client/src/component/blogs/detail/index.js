@@ -8,7 +8,6 @@ function BlogDetail() {
     const data = listBlogs.find(item => item.id == id)
 
     const sendComment = (formData) => {
-        console.log(formData)
     }
     const defaultForm = {
         name: '',

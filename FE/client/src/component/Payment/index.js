@@ -81,7 +81,7 @@ const Payment = () => {
     isAddressValid(userAddress);
 
     if(nameRef.current.className === 'form__wrapper success' && emailRef.current.className === 'form__wrapper success' && phoneRef.current.className === 'form__wrapper success' && addressRef.current.className === 'form__wrapper success') {
-      const idList = paymentItems.map(item => item._id);
+      const idList = paymentItems.map(item => { return {nameProduct: item.name, quantity: item.amount}});
       const newOrder = {
         email: userEmail,
         address: userAddress,
@@ -91,10 +91,11 @@ const Payment = () => {
         payment: "COD",
         note: "test"
       }
-      axios.post('https://haluauto.herokuapp.com/order', newOrder);
-      localStorage.removeItem('cart');
-      navigate('/checkout');
-      console.log('Order placed successfully!');
+      axios.post('https://haluauto.herokuapp.com/order', newOrder)
+      .then((res) => {
+        localStorage.removeItem('cart');
+        navigate('/checkout');
+      })
     }
   };
 
@@ -123,8 +124,8 @@ const Payment = () => {
                 value={email} onChange={(e) => setEmail(e.target.value)}
                 required
                 ></input>
-                <i class="fa-solid fa-circle-check"></i>
-                <i class="fa-solid fa-circle-exclamation"></i>
+                <i className="fa-solid fa-circle-check"></i>
+                <i className="fa-solid fa-circle-exclamation"></i>
                 <small>{emailErr}</small>
               <label className="form__label" for="email">Email</label>
             </div>
@@ -136,8 +137,8 @@ const Payment = () => {
                 value={name} onChange={(e) => setName(e.target.value)}
                 required
                 ></input>
-                <i class="fa-solid fa-circle-check"></i>
-                <i class="fa-solid fa-circle-exclamation"></i>
+                <i className="fa-solid fa-circle-check"></i>
+                <i className="fa-solid fa-circle-exclamation"></i>
                 <small>{nameErr}</small>
               <label className="form__label" for="name">Họ và tên</label>
             </div>
@@ -149,8 +150,8 @@ const Payment = () => {
                 value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}
                 required
                 ></input>
-                <i class="fa-solid fa-circle-check"></i>
-                <i class="fa-solid fa-circle-exclamation"></i>
+                <i className="fa-solid fa-circle-check"></i>
+                <i className="fa-solid fa-circle-exclamation"></i>
                 <small>{phoneNumErr}</small>
               <label className="form__label" for="phone-number">Số điện thoại</label>
             </div>
@@ -162,8 +163,8 @@ const Payment = () => {
                 value={address} onChange={(e) => setAddress(e.target.value)}
                 required
                 ></input>
-                <i class="fa-solid fa-circle-check"></i>
-                <i class="fa-solid fa-circle-exclamation"></i>
+                <i className="fa-solid fa-circle-check"></i>
+                <i className="fa-solid fa-circle-exclamation"></i>
                 <small>{addressErr}</small>
               <label className="form__label" for="address">Địa chỉ</label>
             </div>
@@ -183,7 +184,7 @@ const Payment = () => {
             <span>{formatPrice(totalPayment)}</span>
           </div>
           <div className="payment-confirm">
-            <Link to='/cart'><span><i class="fa-solid fa-angle-left"></i> Quay về giỏ hàng</span></Link>
+            <Link to='/cart'><span><i className="fa-solid fa-angle-left"></i> Quay về giỏ hàng</span></Link>
             <button onClick={handleInput}>Đặt hàng</button>
           </div>
         </div>

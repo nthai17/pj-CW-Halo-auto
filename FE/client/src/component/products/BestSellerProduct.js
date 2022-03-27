@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const BestSellerProduct = ({ list }) => {
-  // console.log(list);
   const setting = {
     speed: 500,
     slidesToShow: 3,
@@ -21,7 +20,7 @@ const BestSellerProduct = ({ list }) => {
       <div className="wrap-product-sale">
         {list.length && (
           <Slider {...setting}>
-            {list.map((item) => <ProductItemSlide data={item} key={item.id}/>)}
+            {list.map((item) => <ProductItemSlide data={item} key={item._id}/>)}
           </Slider>
         )}
       </div>

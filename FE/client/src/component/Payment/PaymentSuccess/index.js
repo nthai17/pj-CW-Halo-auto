@@ -6,7 +6,7 @@ const PaymentSuccess = () => {
     <div className='grid wide home__section__wrap'>
       <div className="payment-success">
         <div className="payment-success__wrapper">
-          <i class="fa-solid fa-circle-check"></i>
+          <i className="fa-solid fa-circle-check"></i>
           <h3>Order placed successfully!</h3>
           <Link to="/">
           <div className='payment__continue mt-5'>
