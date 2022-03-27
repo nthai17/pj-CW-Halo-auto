@@ -3,7 +3,6 @@ import './index.scss'
 
 function Sales() {
     const handleChangFilter = (value) => {
-        console.log(value)
     }
     return ( 
         <div className="admin__sales">

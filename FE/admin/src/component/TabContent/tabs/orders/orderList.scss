@@ -1,0 +1,47 @@
+@import '../../../scss/variable.scss';
+
+.admin__orders__table {
+    padding: 16px;
+    table {
+        width: 100%;
+        border-top: $borderDefault;
+        border-collapse: collapse;
+    }
+    thead {
+        td {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+    tr {
+        height:100px;
+    }
+    td {
+        font-size: 18px;
+        border-bottom: $borderDefault;
+        text-align: center;
+    }
+    .product__list {
+        padding-top: 8px;
+        padding-left: 20px;
+        &__item {
+            height: 90px;
+            margin-bottom: 8px;
+            display: flex;
+            &__img {
+                height: 100%;
+                img {height: 100%;}
+            }
+            &__info {
+                margin-left: 8px;
+                text-align: left;
+                &__name {
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+    &__address {
+        word-break: break-word;
+    }
+}

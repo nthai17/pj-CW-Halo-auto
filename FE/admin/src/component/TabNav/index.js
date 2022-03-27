@@ -1,7 +1,8 @@
 import './index.scss'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 function TabNav() {
+    const navigate = useNavigate()
     return ( 
         <div className='admin-nav'>
             <ul className='admin-nav-list'>
@@ -43,6 +44,11 @@ function TabNav() {
                 </li>
                 <li className='admin-nav-item'>
                     <NavLink 
+                        onClick={(e) => {
+                            e.preventDefault()
+                            localStorage.removeItem("isAdminLogin")
+                            navigate('/login')
+                        }}
                         to='login'
                         className='h-100 text-white flex-center flex-column'
                     >

@@ -13,8 +13,8 @@ function Users() {
     const handleChange = (value) => {
         const order = getSortFilter(value)
         const res = userListRender.sort((a,b) => {
-            if (order === 'asc') return a.userName > b.userName ? 1 : -1 
-            else return b.userName > a.userName ? 1 : -1
+            if (order === 'asc') return a.userName.toLowerCase() > b.userName.toLowerCase() ? 1 : -1 
+            else return b.userName.toLowerCase() > a.userName.toLowerCase() ? 1 : -1
         })
         setUserListRender([...res])
     }

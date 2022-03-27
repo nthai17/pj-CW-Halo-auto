@@ -35,8 +35,8 @@ function Products() {
     const handleChangFilter = (value) => {
         const order = getSortFilter(value)
         const res = products.sort((a,b) => {
-            if (order === 'asc') return a.name > b.name ? 1 : -1 
-            else return b.name > a.name ? 1 : -1
+            if (order === 'asc') return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1 
+            else return b.name.toLowerCase() > a.name.toLowerCase() ? 1 : -1
         })
         setProducts([...res])
     }
