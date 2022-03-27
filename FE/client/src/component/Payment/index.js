@@ -91,7 +91,7 @@ const Payment = () => {
         payment: "COD",
         note: "test"
       }
-      axios.post('https://haluauto.herokuapp.com/order', newOrder)
+      axios.post(process.env.REACT_APP_API_ORDER, newOrder)
       .then((res) => {
         localStorage.removeItem('cart');
         navigate('/checkout');

@@ -41,20 +41,20 @@ function Products() {
         setProducts([...res])
     }
     const handleCreateNewProduct = (form) => {
-        axios.post(`https://haluauto.herokuapp.com/product`, form)
+        axios.post(REACT_APP_API_PRODUCT, form)
         .then((res) => {
             if (res.data.message.includes('duplicate')) setNewNameError(true)
             else getProduct().then(() => setIsShowModalCreate(false)).then(() => setNewNameError(false))
         })
     }
     const handleEditProduct = (form, id) => {
-        axios.put(`https://haluauto.herokuapp.com/product/${id}`, form)
+        axios.put(`${REACT_APP_API_PRODUCT}/${id}`, form)
         .then((res) => {
             getProduct().then(() => setItemShowModalEdit(false))
         })
     }
     const handleDeleteProduct = (id) => {
-        axios.delete(`https://haluauto.herokuapp.com/product/${id}`).then(() => {
+        axios.delete(`${REACT_APP_API_PRODUCT}/${id}`).then(() => {
             getProduct().then(() => setItemShowModalDelete(false))
         })
     }
