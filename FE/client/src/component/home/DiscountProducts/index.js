@@ -74,7 +74,7 @@ const DiscountProducts = ({ headerText }) => {
                 </div>
                   <div className='discountProducts__container col-md-10'>
                     <div className='row'>
-                      {listDiscout.length && 
+                      {listDiscout.length > 0 && 
                           listDiscout.map((item, index) => {
                             if (index < 4) {
                               return (

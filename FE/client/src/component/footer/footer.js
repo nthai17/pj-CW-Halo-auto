@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           <div className="row__info__email">
             <h1>Email: </h1>
-            <span>tuananhdepzai@gmail.com</span>
+            <span>haloauto@gmail.com</span>
           </div>
           <div className="row__info__time">
             <p>
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="the-end">
-        © Bản quyền thuộc về Haluauto
+        © Bản quyền thuộc về Haloauto
         <span>|</span>
         <span>Cung cấp bởi Bợm group</span>
       </div>

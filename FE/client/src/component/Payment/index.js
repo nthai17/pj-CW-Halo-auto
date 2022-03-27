@@ -1,7 +1,7 @@
 import PaymentItem from "./PaymentItems";
 import { formatPrice } from '../../lib/until';
 import './index.scss';
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
@@ -23,6 +23,10 @@ const Payment = () => {
   const nameRef = useRef(null);
   const phoneRef = useRef(null);
   const addressRef = useRef(null);
+
+  useEffect(() => {
+    if (!paymentItems.length) navigate('/*')
+  }, [])
 
   if(paymentItems && paymentItems.length > 0) {
     totalPayment = paymentItems.reduce((total, item) => total + (item.currentPrice * item.amount), 0);
@@ -127,7 +131,7 @@ const Payment = () => {
                 <i className="fa-solid fa-circle-check"></i>
                 <i className="fa-solid fa-circle-exclamation"></i>
                 <small>{emailErr}</small>
-              <label className="form__label" for="email">Email</label>
+              <label className="form__label" htmtFor="email">Email</label>
             </div>
             <div className="form__wrapper" ref={nameRef}>
               <input 
@@ -140,7 +144,7 @@ const Payment = () => {
                 <i className="fa-solid fa-circle-check"></i>
                 <i className="fa-solid fa-circle-exclamation"></i>
                 <small>{nameErr}</small>
-              <label className="form__label" for="name">Họ và tên</label>
+              <label className="form__label" htmtFor="name">Họ và tên</label>
             </div>
             <div className="form__wrapper" ref={phoneRef}>
               <input 
@@ -153,7 +157,7 @@ const Payment = () => {
                 <i className="fa-solid fa-circle-check"></i>
                 <i className="fa-solid fa-circle-exclamation"></i>
                 <small>{phoneNumErr}</small>
-              <label className="form__label" for="phone-number">Số điện thoại</label>
+              <label className="form__label" htmtFor="phone-number">Số điện thoại</label>
             </div>
             <div className="form__wrapper" ref={addressRef}>
               <input 
@@ -166,7 +170,7 @@ const Payment = () => {
                 <i className="fa-solid fa-circle-check"></i>
                 <i className="fa-solid fa-circle-exclamation"></i>
                 <small>{addressErr}</small>
-              <label className="form__label" for="address">Địa chỉ</label>
+              <label className="form__label" htmtFor="address">Địa chỉ</label>
             </div>
           </form>
         </div>
