@@ -18,7 +18,7 @@ function Products() {
     const [newNameError, setNewNameError] = useState(false)
     // api
     const getProduct = async () => {
-        return axios.get('https://haluauto.herokuapp.com/product').then(res => {setProducts(res.data.listProduct)})
+        return axios.get(process.env.REACT_APP_API_PRODUCT).then(res => {setProducts(res.data.listProduct)})
     }
     //
     useEffect(() => {

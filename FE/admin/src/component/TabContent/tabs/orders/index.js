@@ -23,7 +23,7 @@ function Orders() {
 
     useEffect(() => {
         const getOrders = async () => {
-            axios.get('https://haluauto.herokuapp.com/order')
+            axios.get(process.env.REACT_APP_API_ORDER)
             .then((res) => {
                 setOrderList(res.data.listOrder)
             })

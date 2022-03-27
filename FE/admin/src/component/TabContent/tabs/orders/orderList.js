@@ -17,7 +17,7 @@ function OrderList({list}) {
     }
     useEffect(() => {
         const getProduct = async () => {
-            axios.get('https://haluauto.herokuapp.com/product').then(res => {setProductList(res.data.listProduct)})
+            axios.get(process.env.REACT_APP_API_PRODUCT).then(res => {setProductList(res.data.listProduct)})
         }
         getProduct()
     }, [])
@@ -26,12 +26,12 @@ function OrderList({list}) {
             <table>
                 <thead>
                     <tr>
-                        <td style={{width: '200px'}}>Name</td>
-                        <td style={{width: '200px'}}>Phone</td>
+                        <td >Name</td>
+                        <td >Phone</td>
                         <td >Email</td>
-                        <td style={{width: '150px'}}>Address</td>
-                        <td style={{width: '250px'}}>Products</td>
-                        <td>Total</td>
+                        <td >Address</td>
+                        <td >Products</td>
+                        <td >Total</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,7 +42,7 @@ function OrderList({list}) {
                                 <tr className="ta-left" key={_id}>
                                     <td>{name}</td>
                                     <td>{phone.toString().length < 10 ? `0${phone}` : phone}</td>
-                                    <td>{email}</td>
+                                    <td><div style={{padding: '0 8px'}}>{email}</div></td>
                                     <td>
                                         <div className="admin__orders__table__address">
                                             {address || 'Chưa cập nhật địa chỉ'}
