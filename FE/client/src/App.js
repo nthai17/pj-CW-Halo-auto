@@ -8,6 +8,8 @@ import ProductsDetail from './component/products/productDetails/detail'
 import Introduce from './component/introduce'
 import Blogs from './component/blogs'
 import BlogDetail from './component/blogs/detail'
+import Header from "./component/header/header";
+import Footer from "./component/footer/footer";
 // lib
 import { useLocation } from 'react-router-dom'
 import Tab from "./component/products/productDetails/tabs";
@@ -23,6 +25,7 @@ function App() {
   return (
     <div className="App">
       {/* header here: Tuấn */}
+      <Header/>
 
       {/* content here */}
       <Routes>
@@ -45,6 +48,7 @@ function App() {
       </Routes>
 
       {/* footer here: Tuấn*/}
+      <Footer/>
     </div>
   );
 }

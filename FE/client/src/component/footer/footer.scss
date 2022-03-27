@@ -1,0 +1,149 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background-color: #212529;
+  .row {
+    display: flex;
+    height: 200px;
+    margin: 0 40px;
+    padding: 20px 0;
+    &__info {
+      width: 40%;
+      height: 100%;
+      &__img {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-image: url("https://bizweb.dktcdn.net/thumb/medium/100/364/158/themes/802198/assets/logo.png?1648090003092");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &__location {
+        &::before {
+          background: url("https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/icon-image.png?1648089955586")
+            no-repeat scroll -25px -19px;
+        }
+      }
+      &__hotline {
+        &::before {
+          background: url("https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/icon-image.png?1648089955586")
+            no-repeat scroll -86px -19px;
+        }
+      }
+      &__email {
+        &::before {
+          background: url("https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/icon-image.png?1648089955586")
+            no-repeat scroll -152px -19px;
+        }
+      }
+      &__time {
+        &::before {
+          background: url("https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/icon-image.png?1648089955586")
+            no-repeat scroll -219px -19px;
+        }
+        p {
+          color: #fff;
+          margin-left: 40px;
+          font-family: "Tahoma-mong";
+          font-size: 14px;
+        }
+      }
+      &__location,
+      &__hotline,
+      &__email,
+      &__time {
+        position: relative;
+        display: flex;
+        margin-top: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -2px;
+          width: 30px;
+          height: 30px;
+        }
+        h1 {
+          color: #fff;
+          width: 16%;
+          margin-left: 40px;
+          font-family: "Tahoma";
+          font-size: 18px;
+        }
+        span {
+          color: #fff;
+          font-family: "Tahoma-mong";
+          font-size: 14px;
+          padding-top: 2px;
+        }
+      }
+    }
+    &__contact {
+        display: flex;
+        width: 60%;
+        height: 100%;
+        margin-top: 40px;
+        &__details, &__social{
+            padding-left: 200px;
+            .text{
+                color: #fff;
+                position: relative;
+                padding-left: 30px;
+                margin: 20px 0;
+                font-size: 20px;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 22px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0px;
+                    top: 4px;
+                    background: url('https://bizweb.dktcdn.net/100/364/158/themes/802198/assets/icon-image.png?1648089955586') no-repeat scroll -32px -131px;
+                }
+            }
+            &__link {
+                display: block;
+                font-family: 'Tahama-mong';
+                color: #fff;
+                font-size: 18px;
+                padding-bottom: 10px;
+            }
+            &__icon {
+                display: block;
+                position: relative;
+                text-align: center;
+                width:40px;
+                height: 40px;
+                line-height: 40px;
+                background-color: #fff;
+                font-size: 18px;
+                color: #484848;
+                border-radius: 3px;
+                margin-bottom: 10px;
+                i{
+                    width: 100%;
+                    height: 100%;
+                }
+                p{
+                    color: #fff;
+                    position: absolute;
+                    top: 0;
+                    left: 50px;
+                    font-family: 'Tahoma-mong';
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+  }
+  .the-end{
+      color: #fff;
+      position: absolute;
+      padding-bottom: 10px;
+      bottom: 0;
+      transform: translateX(100%);
+  }
+}
