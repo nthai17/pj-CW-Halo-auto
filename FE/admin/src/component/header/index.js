@@ -3,13 +3,11 @@ import Select from 'react-select'
 
 function Header({onChange, text}) {
     const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
-      ]
+        {value: 'name-asc', label: 'Tên từ A-Z'},
+        {value: 'name-desc', label: 'Tên từ Z-A'}
+    ]
 
     const handleChange = (option) => {
-        console.log(option)
         onChange && onChange(option.value)
     }
 

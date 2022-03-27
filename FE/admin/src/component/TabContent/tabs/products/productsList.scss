@@ -1,0 +1,7 @@
+.admin__products__list {
+    padding: 16px;
+    &__inner {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}

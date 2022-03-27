@@ -1,0 +1,54 @@
+@import '../../../scss/variable.scss';
+
+.product__item {
+    padding: 0 8px;
+    margin-bottom: 16px;
+    &-wrap {
+        position: relative;
+        height: 350px;
+        background-color: white;
+        @include borderDefault;
+        &:hover {
+            box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+            @include borderNone;
+        }
+    }
+    &__background {
+        height: 230px;
+        text-align: center;
+        img {
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__name {
+        text-align: center;
+        color: $textColor;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        margin-top: 30px;
+    }
+    &__option {
+        display: flex;
+        justify-content: center;
+        &__item {
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 12px;
+            &:hover {
+                opacity: 0.7;
+            }
+            &--edit {
+                color: blue;
+            }
+            &--delete {
+                color: $redColor;
+            }
+            &--view {
+                color: darkgoldenrod;
+            }
+        }
+    }
+}

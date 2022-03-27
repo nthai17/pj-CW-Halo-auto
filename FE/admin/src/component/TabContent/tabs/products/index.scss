@@ -1,0 +1,14 @@
+.admin__products {
+    &__add {
+        margin-top: 16px;
+        padding: 0 32px;
+        font-size: 20px;
+        &__btn {
+            cursor: pointer;
+            color: blue;
+            &:hover {
+                color: rgb(3, 3, 110);
+            }
+        }
+    }
+}

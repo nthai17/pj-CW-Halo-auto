@@ -1,0 +1,25 @@
+@import '../../../scss/variable.scss';
+
+.admin__users__table {
+    padding: 16px;
+    table {
+        width: 100%;
+        border-top: $borderDefault;
+        border-collapse: collapse;
+    }
+    thead {
+        td {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+    tr {
+        height:100px;
+    }
+    td {
+        font-size: 18px;
+        border-bottom: $borderDefault;
+        text-align: center;
+        width: 25%;
+    }
+}
